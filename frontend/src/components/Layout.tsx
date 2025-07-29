@@ -77,7 +77,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Settings className="w-5 h-5 text-white" />
               </div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-white">
-                Room Scheduler
+                Schedule Optimization
               </h1>
             </div>
             <button

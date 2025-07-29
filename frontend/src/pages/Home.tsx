@@ -75,7 +75,7 @@ const Home: React.FC = () => {
       {/* Welcome Section */}
       <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-8 text-white">
         <h1 className="text-3xl font-bold mb-4">
-          Welcome to Room Scheduler Dashboard
+          Welcome to Schedule Optimization Dashboard
         </h1>
         <p className="text-blue-100 text-lg max-w-2xl">
           Efficiently manage room scheduling, predict conflicts, and optimize
