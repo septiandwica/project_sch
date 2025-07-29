@@ -14,9 +14,7 @@ export interface FixedConflictResponse {
     Class: string;
     Cr: number;
     Curriculum: string;
-    "Lecturer #1": string;
-    "Lecturer #2": string;
-    "Lecturer #3": string;
+    "Lecturer": string;
     Major: string;
     "Program Session": string;
     Room: string;

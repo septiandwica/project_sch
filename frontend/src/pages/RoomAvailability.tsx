@@ -108,7 +108,7 @@ const RoomAvailability: React.FC = () => {
                 <span>Processing...</span>
               </div>
             ) : (
-              "Predict & Download CSV"
+              "Predict"
             )}
           </button>
         </div>
@@ -167,7 +167,7 @@ const RoomAvailability: React.FC = () => {
         <div className="mt-4">
           <a
             href={csvDownloadLink}
-            className="text-blue-600 dark:text-blue-400 underline"
+             className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
             download
           >
             Download the prediction results as CSV

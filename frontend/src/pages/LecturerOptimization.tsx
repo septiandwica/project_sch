@@ -211,8 +211,7 @@ const LecturerOptimization: React.FC = () => {
           </li>
           <li>
             • <strong>Lecturer File:</strong> Must contain columns: Lecturer
-            Name, Lec. Type, Job, Current Work Days, Time Preference, Day
-            Preference, Room Preference, Notes
+            Name, Lec. Type, Notes
           </li>
           <li>• All files must be in CSV format</li>
         </ul>

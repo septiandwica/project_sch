@@ -421,7 +421,7 @@ def resolve_conflict():
                         'Room': new_room,
                         'Sched. Time': conflicting_time,
                         'Subject': conflict['Subject'],
-                        'Lecturer #1': conflict['Lecturer #1'],
+                        'Lecturer': conflict['Lecturer'],
                     })
                     conflict_count += 1  # Konflik berhasil diselesaikan
                 else:
@@ -441,7 +441,7 @@ def resolve_conflict():
                             'Room': conflicting_room,
                             'Sched. Time': new_time,
                             'Subject': conflict['Subject'],
-                            'Lecturer #1': conflict['Lecturer #1'],
+                            'Lecturer': conflict['Lecturer'],
                         })
                         conflict_count += 1  # Konflik berhasil diselesaikan
 
@@ -467,7 +467,7 @@ def resolve_conflict():
                                 'Room': new_room,
                                 'Sched. Time': new_time,
                                 'Subject': conflict['Subject'],
-                                'Lecturer #1': conflict['Lecturer #1'],
+                                'Lecturer': conflict['Lecturer'],
                             })
                             conflict_count += 1  # Konflik berhasil diselesaikan
 
@@ -517,8 +517,60 @@ def calculate_credits_per_day(schedule_df, lecturer_name):
     
     return credits_per_day
 
-def can_assign_lecturer(schedule_df, lecturer_name, lecturer_type, new_day, new_credits):
-    """Check if lecturer can be assigned based on constraints"""
+def check_lecturer_availability(lecturer_name, new_day, new_credits, lecturer_df, schedule_df):
+    """Check if a lecturer's availability based on their 'Notes' field with flexible pattern matching"""
+    
+    # Get the Notes value for the lecturer
+    lecturer_notes = lecturer_df[lecturer_df['Lecturer Name'] == lecturer_name]['Notes'].values[0]
+    
+    # Get the Room and Session restrictions
+    if isinstance(lecturer_notes, str):
+        notes = lecturer_notes.split(',')
+        
+        # General check for day restrictions like 'No Mon', 'No Tue', etc.
+        for note in notes:
+            # Check for day restriction 'No {day}'
+            if f'No {new_day}' in note:
+                return False, f"Lecturer is not available on {new_day}"
+            
+            # Check for day range like 'Mon-Wed', 'Tue-Fri', etc.
+            if '-' in note:
+                days = note.split('-')
+                # Check if the new_day is within the range of days
+                days_in_range = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
+                start_idx = days_in_range.index(days[0])
+                end_idx = days_in_range.index(days[1])
+                
+                if not (start_idx <= days_in_range.index(new_day) <= end_idx):
+                    return False, f"Lecturer can only be assigned between {days[0]} and {days[1]}"
+            
+            # Check for session-related restrictions (e.g., 'No Session1', 'Session2-Session4')
+            if 'Session' in note:
+                if '-' in note:
+                    session_range = note.split('-')
+                    session_start = int(session_range[0].replace('Session', ''))
+                    session_end = int(session_range[1].replace('Session', ''))
+                    # Extract the session number (e.g., Mon1, Tue3, etc.)
+                    session_number = int(new_credits.replace(f'{new_day}', '').replace('Session', ''))  # e.g. 'Mon1' -> 1
+                    
+                    # Check if the session is in the restricted range
+                    if session_start <= session_number <= session_end:
+                        return False, f"Lecturer cannot be assigned to Session {session_number} on {new_day}"
+                elif f"Session{new_credits}" in note:
+                    return False, f"Lecturer cannot be assigned to {new_credits} on {new_day}"
+
+    return True, "OK"
+
+
+def can_assign_lecturer(schedule_df, lecturer_name, lecturer_type, new_day, new_credits, lecturer_df):
+    """Check if lecturer can be assigned based on constraints, including no consecutive classes"""
+    
+    # Check the lecturer's availability based on Notes
+    can_assign, reason = check_lecturer_availability(lecturer_name, new_day, new_credits, lecturer_df, schedule_df)
+    if not can_assign:
+        return False, reason
+    
+    # Existing checks (daily credit limit, weekly working days limit, consecutive classes)
     current_credits_per_day = calculate_credits_per_day(schedule_df, lecturer_name)
     
     # Get current credits for the new day
@@ -538,8 +590,41 @@ def can_assign_lecturer(schedule_df, lecturer_name, lecturer_type, new_day, new_
     if working_days > max_working_days:
         return False, f"Working days limit exceeded ({working_days} > {max_working_days})"
     
-    return True, "OK"
+    # Check for consecutive classes on the same day
+    existing_schedule = schedule_df[schedule_df['Lecturer'] == lecturer_name]
+    existing_times = existing_schedule[existing_schedule['Sched. Time'].str.startswith(new_day)]['Sched. Time']
+    
+    # Initialize a list to store hours of existing classes
+    existing_hours = []
+    
+    for time in existing_times:
+        # Ensure time is a string before applying split()
+        if isinstance(time, str):  # Check if the value is a string
+            try:
+                # Extract the part after the day abbreviation (e.g., "Thu1" -> "1")
+                hour_part = time[len(new_day):]  # Get the part after 'Thu', 'Mon', etc.
+                
+                # If hour_part is non-empty, convert it to an integer (representing the class hour)
+                if hour_part:
+                    hour = int(hour_part)
+                    existing_hours.append(hour)
+            except ValueError:
+                # Handle cases where the hour part can't be converted to an integer
+                continue
+    
+    # Check if the new class conflicts with existing classes (i.e., if they are consecutive)
+    try:
+        new_class_hour = int(str(new_credits).split(":")[1])  # Assuming new_credits contains time info in HH:MM format
+    except (IndexError, ValueError):
+        new_class_hour = None  # Handle cases where `new_credits` is not in the expected format
 
+    # If we couldn't extract the class hour from new_credits, skip the consecutive check
+    if new_class_hour is not None:
+        for hour in existing_hours:
+            if abs(new_class_hour - hour) == 1:  # Check if there are classes consecutively in time
+                return False, f"Cannot assign consecutive classes on the same day"
+    
+    return True, "OK"
 def assign_lecturers_to_schedule(schedule_df, lecturer_df):
     """Main function to assign lecturers to schedule"""
     try:
@@ -585,7 +670,7 @@ def assign_lecturers_to_schedule(schedule_df, lecturer_df):
             for lecturer in lecturers_to_try:
                 lecturer_type = lecturer_type_map[lecturer]
                 
-                can_assign, reason = can_assign_lecturer(result_df, lecturer, lecturer_type, day, subject_credits)
+                can_assign, reason = can_assign_lecturer(result_df, lecturer, lecturer_type, day, subject_credits, lecturer_df)
                 
                 if can_assign:
                     result_df.loc[idx, 'Lecturer'] = lecturer
@@ -751,6 +836,8 @@ def health_check():
             'room_prediction': '/api/room/predict',
             'schedule_assignment': '/api/schedule/optimize',
             'conflict_detection': '/api/conflict/predict',
+            'lecturer_assignment': '/api/schedule/lecturer',
+            'conflict_resolution': '/api/conflict/resolve',
             'file_download': '/api/download/<filename>',
             'health_check': '/api/health'
         }

@@ -79,7 +79,7 @@ const Home: React.FC = () => {
         </h1>
         <p className="text-blue-100 text-lg max-w-2xl">
           Efficiently manage room scheduling, predict conflicts, and optimize
-          resource allocation with our intelligent room management system.
+          resource allocation with our intelligent schedule management system.
         </p>
       </div>
 

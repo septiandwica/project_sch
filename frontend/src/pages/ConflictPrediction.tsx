@@ -41,7 +41,7 @@ const ConflictPrediction: React.FC = () => {
       }
     } catch (err: any) {
       setError(
-        err.response?.data?.error || "An error occurred during training"
+        err.response?.data?.error || "An error occurred during Prediction"
       );
     } finally {
       setLoading(false);
@@ -91,7 +91,7 @@ const ConflictPrediction: React.FC = () => {
 
         <div className="max-w-md">
           <FileUpload
-            label="Training File"
+            label="Schedule File"
             description="CSV file containing schedule data with Room and Sched. Time columns"
             onFileSelect={setTrainFile}
             selectedFile={trainFile}
@@ -210,11 +210,11 @@ const ConflictPrediction: React.FC = () => {
       {/* Instructions */}
       <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg p-6">
         <h3 className="font-semibold text-orange-900 dark:text-orange-300 mb-2">
-          Training Requirements
+          Requirements
         </h3>
         <ul className="text-sm text-orange-800 dark:text-orange-400 space-y-1">
           <li>
-            • <strong>Training File:</strong> Must contain "Room" and "Sched.
+            • <strong> File:</strong> Must contain "Room" and "Sched.
             Time" columns
           </li>
           <li>
@@ -223,9 +223,6 @@ const ConflictPrediction: React.FC = () => {
           </li>
           <li>
             • Higher accuracy indicates better conflict detection capability
-          </li>
-          <li>
-            • Use the generated model file for future conflict predictions
           </li>
         </ul>
       </div>
