@@ -8,6 +8,9 @@ import os
 import random
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
+from datetime import datetime
+import random
+from collections import defaultdict
 
 app = Flask(__name__)
 
@@ -87,7 +90,7 @@ def train_and_predict_room_availability(schedule_df, rooms_df):
             input_encoded = input_encoded[X_encoded.columns]
             
             prediction = model.predict(input_encoded)
-            return "Empty" if prediction == 0 else "Occupied"
+            return "Available" if prediction == 0 else "Occupied"
         
         # Buat prediksi untuk semua kombinasi dan filter hanya yang kosong
         empty_rooms = []
@@ -99,14 +102,16 @@ def train_and_predict_room_availability(schedule_df, rooms_df):
                 all_predictions.append({
                     'Room': room,
                     'Session_Time': session_time,
-                    'Status': availability
+                    'Status': availability,
+                    'Notes': rooms_df.loc[rooms_df['Name'] == room, 'Notes'].values[0]  # Menambahkan Notes ke prediksi
                 })
                 
-                if availability == "Empty":
+                if availability == "Available":
                     empty_rooms.append({
                         'Room': room,
                         'Session_Time': session_time,
-                        'Status': 'Empty'
+                        'Status': 'Available',
+                        'Notes': rooms_df.loc[rooms_df['Name'] == room, 'Notes'].values[0]  # Menambahkan Notes ke ruang kosong
                     })
         
         return {
@@ -120,7 +125,6 @@ def train_and_predict_room_availability(schedule_df, rooms_df):
         
     except Exception as e:
         raise Exception(f"Error in room availability prediction: {str(e)}")
-
 def assign_room_for_major(major, rooms_by_major):
     """Fungsi untuk assign room berdasarkan major"""
     available_rooms = rooms_by_major.get(major, [])
@@ -160,7 +164,7 @@ def predict_room_availability_endpoint():
         schedule_df = pd.read_csv(schedule_file)
         
         # Validasi kolom yang diperlukan
-        required_rooms_cols = ['Name']
+        required_rooms_cols = ['Name', 'Notes']
         required_schedule_cols = ['Room', 'Sched. Time']
         
         if not all(col in rooms_df.columns for col in required_rooms_cols):
@@ -212,7 +216,7 @@ def predict_room_availability_endpoint():
 
 # ==================== ORIGINAL ENDPOINTS ====================
 
-@app.route('/api/upload', methods=['POST'])
+@app.route('/api/schedule/optimize', methods=['POST'])
 def upload_file():
     """Original endpoint untuk upload dan proses file schedule assignment"""
     if 'rooms_file' not in request.files or 'sched_file' not in request.files or 'data_file' not in request.files:
@@ -288,7 +292,7 @@ def upload_file():
 
     return jsonify({'error': 'Invalid file format'}), 400
 
-@app.route('/api/conflict/train', methods=['POST'])
+@app.route('/api/conflict/predict', methods=['POST'])
 def train_model():
     """Original endpoint untuk train model conflict detection"""
     if 'train_file' not in request.files:
@@ -349,6 +353,382 @@ def train_model():
 
     return jsonify({'error': 'Invalid file format'}), 400
 
+@app.route('/api/conflict/resolve', methods=['POST'])
+def resolve_conflict():
+    try:
+        # Memeriksa apakah file jadwal dan file ruang tersedia dalam request
+        if 'schedule_file' not in request.files or 'room_file' not in request.files:
+            return jsonify({'error': 'Schedule file or Room file not provided'}), 400
+
+        schedule_file = request.files['schedule_file']
+        room_file = request.files['room_file']
+
+        # Memeriksa apakah file yang di-upload memiliki nama
+        if schedule_file.filename == '' or room_file.filename == '':
+            return jsonify({'error': 'No file selected'}), 400
+
+        # Memeriksa apakah file memiliki format yang valid
+        if schedule_file and allowed_file(schedule_file.filename) and room_file and allowed_file(room_file.filename):
+            # Menyimpan file yang di-upload
+            schedule_filename = secure_filename(schedule_file.filename)
+            room_filename = secure_filename(room_file.filename)
+            schedule_file.save(os.path.join(app.config['UPLOAD_FOLDER'], schedule_filename))
+            room_file.save(os.path.join(app.config['UPLOAD_FOLDER'], room_filename))
+
+            # Membaca file jadwal dan file ruang
+            schedule_df = pd.read_csv(os.path.join(app.config['UPLOAD_FOLDER'], schedule_filename))
+            room_df = pd.read_csv(os.path.join(app.config['UPLOAD_FOLDER'], room_filename))
+
+            # Clean up column names by stripping any whitespace
+            schedule_df.columns = schedule_df.columns.str.strip()  # Strip spaces from column names
+            room_df.columns = room_df.columns.str.strip()  # Strip spaces from column names
+
+            # Periksa apakah kolom 'Conflict' ada
+            if 'Conflict' not in schedule_df.columns:
+                return jsonify({'error': "Column 'Conflict' is missing from the schedule file."}), 400
+
+            # Menyaring hanya ruangan dengan Notes == 'general'
+            available_rooms = room_df[room_df['Notes'] == 'general']
+
+            # Resolving conflicts
+            conflicts = []  # Initialize conflicts list
+            conflict_count = 0  # Variabel untuk menghitung jumlah konflik yang berhasil diselesaikan
+            used_rooms = set()  # Set untuk melacak ruang yang sudah digunakan
+
+            for index, conflict in schedule_df[schedule_df['Conflict'] == 1.0].iterrows():
+                # Temukan ruang yang bertabrakan
+                conflicting_room = conflict['Room']
+                conflicting_time = conflict['Sched. Time']
+                major = conflict['Major']  # Ambil major dari jadwal yang bermasalah
+
+                # Langkah 1: Cek apakah ada ruang kosong yang lain di waktu yang sama dengan Notes "general"
+                available_room_at_same_time = available_rooms[
+                    (available_rooms['Session_Time'] == conflicting_time) & 
+                    (available_rooms['Status'] == 'Available') &
+                    (~available_rooms['Room'].isin(used_rooms))  # Hanya pilih ruang yang belum digunakan
+                ]
+
+                if not available_room_at_same_time.empty:
+                    # Jika ada ruang kosong di waktu yang sama, pindahkan jadwal ke ruang kosong tersebut
+                    new_room = available_room_at_same_time.iloc[0]['Room']
+                    schedule_df.at[index, 'Room'] = new_room
+
+                    # Tandai ruang yang digunakan sebagai "Occupied"
+                    room_df.at[room_df[room_df['Room'] == new_room].index[0], 'Status'] = 'Occupied'
+                    used_rooms.add(new_room)  # Menambahkan ruang yang dipakai ke set
+                    room_df.to_csv(os.path.join(app.config['UPLOAD_FOLDER'], room_filename), index=False)
+                    conflicts.append({
+                        'Room': new_room,
+                        'Sched. Time': conflicting_time,
+                        'Subject': conflict['Subject'],
+                        'Lecturer #1': conflict['Lecturer #1'],
+                    })
+                    conflict_count += 1  # Konflik berhasil diselesaikan
+                else:
+                    # Langkah 2: Jika tidak ada ruang kosong di waktu yang sama, coba cari waktu kosong untuk ruang yang sama
+                    available_time_for_same_room = available_rooms[
+                        (available_rooms['Room'] == conflicting_room) &
+                        (available_rooms['Status'] == 'Empty') &
+                        (~available_rooms['Room'].isin(used_rooms))  # Hanya pilih ruang yang belum digunakan
+                    ]
+
+                    if not available_time_for_same_room.empty:
+                        # Pindahkan jadwal ke waktu kosong yang tersedia untuk ruang yang sama
+                        new_time = available_time_for_same_room.iloc[0]['Session_Time']
+                        schedule_df.at[index, 'Sched. Time'] = new_time
+                        used_rooms.add(conflicting_room)  # Menandai ruang yang sama telah digunakan
+                        conflicts.append({
+                            'Room': conflicting_room,
+                            'Sched. Time': new_time,
+                            'Subject': conflict['Subject'],
+                            'Lecturer #1': conflict['Lecturer #1'],
+                        })
+                        conflict_count += 1  # Konflik berhasil diselesaikan
+
+                    else:
+                        # Langkah 3: Jika tidak ada ruang dan waktu kosong di ruang yang sama, kita cari ruang kosong di waktu yang berbeda
+                        available_room_at_different_time = available_rooms[
+                            (available_rooms['Status'] == 'Available') &
+                            (~available_rooms['Room'].isin(used_rooms))  # Hanya pilih ruang yang belum digunakan
+                        ]
+
+                        if not available_room_at_different_time.empty:
+                            # Pindahkan ke ruang yang kosong di waktu lain
+                            new_room = available_room_at_different_time.iloc[0]['Room']
+                            new_time = available_room_at_different_time.iloc[0]['Session_Time']
+                            schedule_df.at[index, 'Room'] = new_room
+                            schedule_df.at[index, 'Sched. Time'] = new_time
+
+                            # Tandai ruang yang digunakan sebagai "Occupied"
+                            room_df.at[room_df[room_df['Room'] == new_room].index[0], 'Status'] = 'Occupied'
+                            used_rooms.add(new_room)  # Menambahkan ruang yang dipakai ke set
+                            room_df.to_csv(os.path.join(app.config['UPLOAD_FOLDER'], room_filename), index=False)
+                            conflicts.append({
+                                'Room': new_room,
+                                'Sched. Time': new_time,
+                                'Subject': conflict['Subject'],
+                                'Lecturer #1': conflict['Lecturer #1'],
+                            })
+                            conflict_count += 1  # Konflik berhasil diselesaikan
+
+            # Menghapus kolom 'Conflict' setelah penyelesaian
+            schedule_df = schedule_df.drop(columns=['Conflict'])
+
+            # Menyimpan jadwal yang telah diperbaiki
+            fixed_schedule_filename = 'fixed_schedule.csv'
+            schedule_df.to_csv(os.path.join(app.config['UPLOAD_FOLDER'], fixed_schedule_filename), index=False)
+
+            # Mengembalikan respons JSON yang mencakup jumlah konflik yang berhasil diselesaikan
+            return jsonify({
+                'message': f'{conflict_count} conflicts resolved successfully',
+                'resolved_schedule': fixed_schedule_filename,
+                'conflicts': conflicts,  # Ensure this contains data
+            })
+
+        return jsonify({'error': 'Invalid file format'}), 400
+
+    except Exception as e:
+        return jsonify({'error': f'Error resolving conflicts: {str(e)}'}), 500
+
+def extract_day_from_schedule(schedule_time):
+    """Extract day from schedule time format like 'Wed14:30-17:15'"""
+    try:
+        if pd.isna(schedule_time) or schedule_time == '':
+            return None
+        
+        # Extract day part (first 3 characters)
+        day = schedule_time[:3]
+        return day
+    except:
+        return None
+
+def calculate_credits_per_day(schedule_df, lecturer_name):
+    """Calculate total credits per day for a lecturer"""
+    lecturer_schedule = schedule_df[schedule_df['Lecturer'] == lecturer_name].copy()
+    
+    if lecturer_schedule.empty:
+        return {}
+    
+    # Extract day from schedule time
+    lecturer_schedule['Day'] = lecturer_schedule['Sched. Time'].apply(extract_day_from_schedule)
+    
+    # Group by day and sum credits
+    credits_per_day = lecturer_schedule.groupby('Day')['Cr'].sum().to_dict()
+    
+    return credits_per_day
+
+def can_assign_lecturer(schedule_df, lecturer_name, lecturer_type, new_day, new_credits):
+    """Check if lecturer can be assigned based on constraints"""
+    current_credits_per_day = calculate_credits_per_day(schedule_df, lecturer_name)
+    
+    # Get current credits for the new day
+    current_day_credits = current_credits_per_day.get(new_day, 0)
+    
+    # Check daily credit limit
+    max_daily_credits = 12 if lecturer_type == 'Full' else 6
+    if current_day_credits + new_credits > max_daily_credits:
+        return False, f"Daily credit limit exceeded ({current_day_credits + new_credits} > {max_daily_credits})"
+    
+    # Check weekly working days limit
+    working_days = len([day for day, credits in current_credits_per_day.items() if credits > 0])
+    if new_day not in current_credits_per_day:
+        working_days += 1
+    
+    max_working_days = 5 if lecturer_type == 'Full' else 2
+    if working_days > max_working_days:
+        return False, f"Working days limit exceeded ({working_days} > {max_working_days})"
+    
+    return True, "OK"
+
+def assign_lecturers_to_schedule(schedule_df, lecturer_df):
+    """Main function to assign lecturers to schedule"""
+    try:
+        # Create a copy of schedule dataframe
+        result_df = schedule_df.copy()
+        result_df['Lecturer'] = None
+        
+        # Create lecturer pools
+        full_lecturers = lecturer_df[lecturer_df['Lec. Type'] == 'Full']['Lecturer Name'].tolist()
+        part_lecturers = lecturer_df[lecturer_df['Lec. Type'] == 'Part']['Lecturer Name'].tolist()
+        
+        # Create lecturer type mapping
+        lecturer_type_map = dict(zip(lecturer_df['Lecturer Name'], lecturer_df['Lec. Type']))
+        
+        # Statistics tracking
+        assignment_stats = {
+            'total_subjects': len(result_df),
+            'assigned': 0,
+            'unassigned': 0,
+            'lecturer_workload': defaultdict(lambda: {'days': set(), 'total_credits': 0, 'subjects': 0})
+        }
+        
+        # Sort schedule by credits (descending) to assign high-credit subjects first
+        sorted_indices = result_df.sort_values('Cr', ascending=False).index
+        
+        for idx in sorted_indices:
+            row = result_df.loc[idx]
+            subject_credits = row['Cr']
+            schedule_time = row['Sched. Time']
+            
+            # Extract day from schedule
+            day = extract_day_from_schedule(schedule_time)
+            if not day:
+                continue
+            
+            # Try to assign lecturer
+            assigned = False
+            
+            # First try full-time lecturers (they have more capacity)
+            lecturers_to_try = full_lecturers + part_lecturers
+            random.shuffle(lecturers_to_try)  # Randomize for fair distribution
+            
+            for lecturer in lecturers_to_try:
+                lecturer_type = lecturer_type_map[lecturer]
+                
+                can_assign, reason = can_assign_lecturer(result_df, lecturer, lecturer_type, day, subject_credits)
+                
+                if can_assign:
+                    result_df.loc[idx, 'Lecturer'] = lecturer
+                    
+                    # Update statistics
+                    assignment_stats['assigned'] += 1
+                    assignment_stats['lecturer_workload'][lecturer]['days'].add(day)
+                    assignment_stats['lecturer_workload'][lecturer]['total_credits'] += subject_credits
+                    assignment_stats['lecturer_workload'][lecturer]['subjects'] += 1
+                    
+                    assigned = True
+                    break
+            
+            if not assigned:
+                assignment_stats['unassigned'] += 1
+        
+        # Prepare final statistics
+        assignment_stats['lecturer_summary'] = {}
+        for lecturer, workload in assignment_stats['lecturer_workload'].items():
+            lecturer_type = lecturer_type_map[lecturer]
+            assignment_stats['lecturer_summary'][lecturer] = {
+                'type': lecturer_type,
+                'working_days': len(workload['days']),
+                'total_credits': workload['total_credits'],
+                'total_subjects': workload['subjects'],
+                'days_list': list(workload['days'])
+            }
+        
+        return result_df, assignment_stats
+        
+    except Exception as e:
+        raise Exception(f"Error in lecturer assignment: {str(e)}")
+
+# New Flask endpoint
+@app.route('/api/schedule/lecturer', methods=['POST'])
+def assign_lecturers_endpoint():
+    """API endpoint untuk mengalokasikan dosen ke jadwal"""
+    
+    # Validasi file upload
+    if 'schedule_file' not in request.files or 'lecturer_file' not in request.files:
+        return jsonify({
+            'error': 'Missing required files',
+            'required_files': ['schedule_file', 'lecturer_file']
+        }), 400
+    
+    schedule_file = request.files['schedule_file']
+    lecturer_file = request.files['lecturer_file']
+    
+    if schedule_file.filename == '' or lecturer_file.filename == '':
+        return jsonify({'error': 'No files selected'}), 400
+    
+    if not (schedule_file and allowed_file(schedule_file.filename) and 
+            lecturer_file and allowed_file(lecturer_file.filename)):
+        return jsonify({'error': 'Invalid file format. Only CSV files are allowed.'}), 400
+    
+    try:
+        # Baca file CSV langsung dari memory
+        schedule_df = pd.read_csv(schedule_file)
+        lecturer_df = pd.read_csv(lecturer_file)
+        
+        # Validasi kolom yang diperlukan
+        required_schedule_cols = ['Program Session', 'Major', 'Curriculum', 'Class', 'Subject', 'Cr', 'Room', 'Sched. Time']
+        required_lecturer_cols = ['Lecturer Name', 'Lec. Type']
+        
+        if not all(col in schedule_df.columns for col in required_schedule_cols):
+            return jsonify({
+                'error': 'Invalid schedule file format',
+                'required_columns': required_schedule_cols,
+                'found_columns': list(schedule_df.columns)
+            }), 400
+        
+        if not all(col in lecturer_df.columns for col in required_lecturer_cols):
+            return jsonify({
+                'error': 'Invalid lecturer file format',
+                'required_columns': required_lecturer_cols,
+                'found_columns': list(lecturer_df.columns)
+            }), 400
+        
+        # Filter dan drop lecturer dengan Lec. Type None atau NaN
+        initial_lecturer_count = len(lecturer_df)
+        lecturer_df = lecturer_df.dropna(subset=['Lec. Type'])  # Drop NaN values
+        lecturer_df = lecturer_df[lecturer_df['Lec. Type'] != 'None']  # Drop 'None' values
+        
+        # Validasi tipe dosen yang tersisa
+        valid_lecturer_types = ['Full', 'Part']
+        lecturer_df = lecturer_df[lecturer_df['Lec. Type'].isin(valid_lecturer_types)]
+        
+        filtered_lecturer_count = len(lecturer_df)
+        dropped_count = initial_lecturer_count - filtered_lecturer_count
+        
+        if lecturer_df.empty:
+            return jsonify({
+                'error': 'No valid lecturers found after filtering',
+                'message': f'All {initial_lecturer_count} lecturers were dropped due to invalid Lec. Type',
+                'valid_types': valid_lecturer_types
+            }), 400
+        
+        # Proses assignment
+        result_df, stats = assign_lecturers_to_schedule(schedule_df, lecturer_df)
+        
+        # Simpan hasil ke CSV (hanya kolom asli + Lecturer)
+        output_filename = 'schedule_with_lecturers.csv'
+        csv_path = os.path.join(app.config['UPLOAD_FOLDER'], output_filename)
+        result_df.to_csv(csv_path, index=False)
+        
+        # Hitung statistik tambahan
+        assignment_rate = (stats['assigned'] / stats['total_subjects']) * 100 if stats['total_subjects'] > 0 else 0
+        
+        # Return hasil dalam format JSON
+        return jsonify({
+            'success': True,
+            'message': 'Lecturer assignment completed successfully',
+            'filtering_info': {
+                'initial_lecturers': initial_lecturer_count,
+                'valid_lecturers': filtered_lecturer_count,
+                'dropped_lecturers': dropped_count,
+                'drop_reason': 'Lec. Type None, NaN, or invalid values'
+            },
+            'statistics': {
+                'total_subjects': stats['total_subjects'],
+                'assigned_subjects': stats['assigned'],
+                'unassigned_subjects': stats['unassigned'],
+                'assignment_rate': round(assignment_rate, 2),
+                'total_valid_lecturers': len(lecturer_df),
+                'active_lecturers': len(stats['lecturer_summary'])
+            },
+            'lecturer_workload': stats['lecturer_summary'],
+            'unassigned_subjects': result_df[result_df['Lecturer'].isna()][
+                ['Subject', 'Class', 'Cr', 'Sched. Time']
+            ].to_dict('records'),
+            'csv_filename': output_filename,
+            'constraints_applied': {
+                'Full-time lecturers': 'Max 5 working days, Max 12 credits per day',
+                'Part-time lecturers': 'Max 2 working days, Max 6 credits per day'
+            }
+        })
+        
+    except pd.errors.EmptyDataError:
+        return jsonify({'error': 'One or more uploaded files are empty'}), 400
+    except pd.errors.ParserError as e:
+        return jsonify({'error': f'Error parsing CSV file: {str(e)}'}), 400
+    except Exception as e:
+        return jsonify({'error': f'Processing error: {str(e)}'}), 500
 @app.route('/api/download/<filename>')
 def download_file(filename):
     """Original endpoint untuk download file"""
@@ -364,12 +744,13 @@ def health_check():
     """Health check endpoint"""
     return jsonify({
         'status': 'healthy',
-        'service': 'Room Availability Predictor API',
+        'service': 'API Scheduling Optimization',
         'version': '1.0.0',
+        'description': 'Python Flask API for scheduling optimization',
         'endpoints': {
             'room_prediction': '/api/room/predict',
-            'schedule_assignment': '/api/upload',
-            'conflict_detection': '/api/conflict/train',
+            'schedule_assignment': '/api/schedule/optimize',
+            'conflict_detection': '/api/conflict/predict',
             'file_download': '/api/download/<filename>',
             'health_check': '/api/health'
         }

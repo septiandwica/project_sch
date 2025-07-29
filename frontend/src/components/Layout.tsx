@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Home, 
@@ -9,9 +9,13 @@ import {
   X, 
   Sun, 
   Moon,
-  Settings
+  User,
+  Settings,
+  FileText
 } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { apiService } from '../services/api';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -21,15 +25,35 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
+  const [healthStatus, setHealthStatus] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Schedule Optimization', href: '/schedule', icon: Calendar },
+    { name: 'Lecturer Optimization', href: '/lecturer', icon: User },
     { name: 'Conflict Prediction', href: '/conflict', icon: AlertTriangle },
     { name: 'Room Availability', href: '/rooms', icon: DoorOpen },
+    { name: 'Fixed Conflict', href: '/fixed', icon: FileText },
   ];
 
   const isCurrentPath = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    const checkHealth = async () => {
+      try {
+        const health = await apiService.healthCheck();
+        setHealthStatus(health);
+      } catch (error) {
+        console.error("Health check failed:", error);
+        setHealthStatus(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkHealth();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
@@ -126,9 +150,24 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
 
             <div className="flex items-center space-x-4">
+              {/* System status */}
               <div className="hidden sm:flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span>System Online</span>
+                {loading ? (
+                  <div className="flex items-center space-x-2">
+                    <LoadingSpinner size="sm" />
+                    <span>Checking...</span>
+                  </div>
+                ) : healthStatus ? (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span className="text-green-600">System Online</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span className="text-red-600">System Offline</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>

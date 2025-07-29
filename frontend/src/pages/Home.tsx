@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Calendar, AlertTriangle, DoorOpen, Activity, TrendingUp } from 'lucide-react';
-import { apiService } from '../services/api';
-import LoadingSpinner from '../components/LoadingSpinner';
+import React, { useEffect, useState } from "react";
+import {
+  Calendar,
+  AlertTriangle,
+  DoorOpen,
+  User,
+  FileText
+} from "lucide-react";
+import { apiService } from "../services/api";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Home: React.FC = () => {
   const [healthStatus, setHealthStatus] = useState<any>(null);
@@ -13,7 +19,7 @@ const Home: React.FC = () => {
         const health = await apiService.healthCheck();
         setHealthStatus(health);
       } catch (error) {
-        console.error('Health check failed:', error);
+        console.error("Health check failed:", error);
       } finally {
         setLoading(false);
       }
@@ -24,32 +30,44 @@ const Home: React.FC = () => {
 
   const features = [
     {
-      title: 'Schedule Optimization',
-      description: 'Optimize room assignments and scheduling for maximum efficiency',
+      title: "Schedule Optimization",
+      description:
+        "Optimize room assignments and scheduling for maximum efficiency",
       icon: Calendar,
-      color: 'bg-blue-500',
-      href: '/schedule'
+      color: "bg-blue-500",
+      href: "/schedule",
     },
     {
-      title: 'Conflict Prediction',
-      description: 'Detect and prevent scheduling conflicts using machine learning',
-      icon: AlertTriangle,
-      color: 'bg-orange-500',
-      href: '/conflict'
+      title: "Lecturer Optimization",
+      description:
+        "Assign lecturers to classes based on preferences and constraints",
+      icon: User,
+      color: "bg-purple-600",
+      href: "/lecturer",
     },
     {
-      title: 'Room Availability',
-      description: 'Predict and analyze room availability patterns',
+      title: "Room Availability",
+      description: "Predict and analyze room availability patterns",
       icon: DoorOpen,
-      color: 'bg-green-500',
-      href: '/rooms'
-    }
-  ];
-
-  const stats = [
-    { name: 'System Uptime', value: '99.9%', icon: Activity, color: 'text-green-600' },
-    { name: 'Processing Speed', value: '< 2s', icon: TrendingUp, color: 'text-blue-600' },
-    { name: 'Accuracy Rate', value: '95%+', icon: AlertTriangle, color: 'text-orange-600' },
+      color: "bg-green-500",
+      href: "/rooms",
+    },
+    {
+      title: "Conflict Prediction",
+      description:
+        "Detect and prevent scheduling conflicts using machine learning",
+      icon: AlertTriangle,
+      color: "bg-orange-500",
+      href: "/conflict",
+    },
+    {
+      title: "Fixed Conflict",
+      description:
+        "Fixed Conflict Room and Sched. Time based on room availability patterns",
+      icon: FileText,
+      color: "bg-purple-600",
+      href: "/fixed",
+    },
   ];
 
   return (
@@ -60,31 +78,9 @@ const Home: React.FC = () => {
           Welcome to Room Scheduler Dashboard
         </h1>
         <p className="text-blue-100 text-lg max-w-2xl">
-          Efficiently manage room scheduling, predict conflicts, and optimize resource allocation 
-          with our intelligent room management system.
+          Efficiently manage room scheduling, predict conflicts, and optimize
+          resource allocation with our intelligent room management system.
         </p>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {stats.map((stat) => {
-          const Icon = stat.icon;
-          return (
-            <div key={stat.name} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center">
-                <Icon className={`w-8 h-8 ${stat.color}`} />
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                    {stat.name}
-                  </p>
-                  <p className="text-2xl font-semibold text-gray-900 dark:text-white">
-                    {stat.value}
-                  </p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
       </div>
 
       {/* Features Grid */}
@@ -92,8 +88,13 @@ const Home: React.FC = () => {
         {features.map((feature) => {
           const Icon = feature.icon;
           return (
-            <div key={feature.title} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow">
-              <div className={`inline-flex p-3 rounded-lg ${feature.color} mb-4`}>
+            <div
+              key={feature.title}
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow"
+            >
+              <div
+                className={`inline-flex p-3 rounded-lg ${feature.color} mb-4`}
+              >
                 <Icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -118,7 +119,28 @@ const Home: React.FC = () => {
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
           System Status
         </h2>
-        
+        {/* Health Check Button */}
+        <button
+          onClick={async () => {
+            setLoading(true);
+            try {
+              const health = await apiService.healthCheck();
+              setHealthStatus(health);
+            } catch (error) {
+              setHealthStatus(null);
+              console.error("Health check failed:", error);
+            } finally {
+              setLoading(false);
+            }
+          }}
+          className="mb-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
+          disabled={loading}
+        >
+          {loading ? "Checking..." : "Check API Health"}
+        </button>
+        {/* End Health Check Button */}
+        {/* Status Display */}
+
         {loading ? (
           <div className="flex items-center justify-center py-8">
             <LoadingSpinner />
@@ -130,23 +152,35 @@ const Home: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-              <span className="text-green-600 font-medium">System Online</span>
+              <span className="text-green-600 font-medium">API Online</span>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h3 className="font-medium text-gray-900 dark:text-white mb-2">Service Information</h3>
+                <h3 className="font-medium text-gray-900 dark:text-white mb-2">
+                  Service Information
+                </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   {healthStatus.service} v{healthStatus.version}
                 </p>
+                <p className="text-xs text-gray-600 dark:text-gray-400 italic">
+                  {healthStatus.description}
+                </p>
               </div>
-              
+
               <div>
-                <h3 className="font-medium text-gray-900 dark:text-white mb-2">Available Endpoints</h3>
+                <h3 className="font-medium text-gray-900 dark:text-white mb-2">
+                  Available Endpoints
+                </h3>
                 <div className="space-y-1">
                   {Object.keys(healthStatus.endpoints || {}).map((endpoint) => (
-                    <div key={endpoint} className="text-sm text-gray-600 dark:text-gray-400">
-                      {endpoint.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                    <div
+                      key={endpoint}
+                      className="text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      {endpoint
+                        .replace("_", " ")
+                        .replace(/\b\w/g, (l) => l.toUpperCase())}
                     </div>
                   ))}
                 </div>
@@ -156,7 +190,7 @@ const Home: React.FC = () => {
         ) : (
           <div className="flex items-center space-x-2">
             <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-            <span className="text-red-600 font-medium">System Offline</span>
+            <span className="text-red-600 font-medium">Api Offline</span>
           </div>
         )}
       </div>

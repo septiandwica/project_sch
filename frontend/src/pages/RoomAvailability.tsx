@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import {
-  DoorOpen,
-
-} from "lucide-react";
+import { DoorOpen } from "lucide-react";
 import FileUpload from "../components/FileUpload";
 import LoadingSpinner from "../components/LoadingSpinner";
 // import { apiService, RoomAvailabilityResponse } from "../services/api";
@@ -49,7 +46,6 @@ const RoomAvailability: React.FC = () => {
 
       // Menyimpan hasil prediksi untuk ditampilkan dalam tabel
       setResultData(data.empty_rooms);
-
     } catch (err: any) {
       setError(err.message || "An error occurred during prediction");
     } finally {
@@ -131,24 +127,38 @@ const RoomAvailability: React.FC = () => {
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Predicted Room Availability
           </h2>
-          <table className="min-w-full table-auto">
-            <thead>
-              <tr>
-                <th className="py-2 px-4 text-left">Room</th>
-                <th className="py-2 px-4 text-left">Scheduled Time</th>
-                <th className="py-2 px-4 text-left">Availability</th>
-              </tr>
-            </thead>
-            <tbody>
-              {resultData.map((row: any, index: number) => (
-                <tr key={index}>
-                  <td className="py-2 px-4">{row.Room}</td>
-                  <td className="py-2 px-4">{row.Session_Time}</td>
-                  <td className="py-2 px-4">{row.Status}</td>
+          <div className="overflow-y-auto max-h-60">
+            {" "}
+            {/* Membuat tabel dapat di-scroll */}
+            <table className="min-w-full table-auto">
+              <thead>
+                <tr>
+                  <th className="py-2 px-4 text-left sticky top-0 bg-white z-10">
+                    Room
+                  </th>
+                  <th className="py-2 px-4 text-left sticky top-0 bg-white z-10">
+                    Notes
+                  </th>
+                  <th className="py-2 px-4 text-left sticky top-0 bg-white z-10">
+                    Scheduled Time
+                  </th>
+                  <th className="py-2 px-4 text-left sticky top-0 bg-white z-10">
+                    Availability
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {resultData.map((row: any, index: number) => (
+                  <tr key={index}>
+                    <td className="py-2 px-4">{row.Room}</td>
+                    <td className="py-2 px-4">{row.Notes}</td>
+                    <td className="py-2 px-4">{row.Session_Time}</td>
+                    <td className="py-2 px-4">{row.Status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
