@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   Home, 
   Calendar, 
@@ -11,14 +11,36 @@ import {
   Moon,
   User,
   Settings,
-  FileText
+  FileText,
+  LogOut
 } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { apiService } from '../services/api';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+// Fungsi untuk decode JWT token
+const jwtDecode = (token: string) => {
+  try {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+    return JSON.parse(jsonPayload);
+  } catch (error) {
+    console.error('Error decoding JWT:', error);
+    return null;
+  }
+};
+
 interface LayoutProps {
   children: React.ReactNode;
+}
+
+interface UserInfo {
+  id: number;
+  username: string;
+  role: string;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -27,19 +49,47 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const [healthStatus, setHealthStatus] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const navigate = useNavigate();
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
+  // Navigation untuk admin (semua menu)
+  const adminNavigation = [
+    { name: 'Home', href: '/home', icon: Home },
     { name: 'Schedule Optimization', href: '/schedule', icon: Calendar },
     { name: 'Lecturer Optimization', href: '/lecturer', icon: User },
     { name: 'Conflict Prediction', href: '/conflict', icon: AlertTriangle },
     { name: 'Room Availability', href: '/rooms', icon: DoorOpen },
     { name: 'Fixed Conflict', href: '/fixed', icon: FileText },
+    { name: 'Schedule', href: '/schedule/calender', icon: FileText },
+    { name: 'Store to Database', href: '/schedule/fixed', icon: FileText }
   ];
+
+  // Navigation untuk non-admin (lecturer - hanya Schedule)
+  const lecturerNavigation = [
+    { name: 'Schedule', href: '/schedule/calender', icon: FileText }
+  ];
+
+  // Menentukan navigation berdasarkan role
+  const navigation = userInfo?.role === 'admin' ? adminNavigation : lecturerNavigation;
 
   const isCurrentPath = (path: string) => location.pathname === path;
 
   useEffect(() => {
+    // Decode JWT token untuk mendapatkan user info
+    const token = localStorage.getItem('access_token');
+    if (token) {
+      const decoded = jwtDecode(token);
+      if (decoded && decoded.sub) {
+        setUserInfo(decoded.sub);
+      } else {
+        // Jika token tidak valid, redirect ke login
+        navigate('/login');
+      }
+    } else {
+      // Jika tidak ada token, redirect ke login
+      navigate('/login');
+    }
+
     const checkHealth = async () => {
       try {
         const health = await apiService.healthCheck();
@@ -53,7 +103,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     };
 
     checkHealth();
-  }, []);
+  }, [navigate]);
+
+  const handleLogout = () => {
+    // Menghapus token dari localStorage
+    localStorage.removeItem('access_token');
+    // Reset user info
+    setUserInfo(null);
+    // Redirect ke login
+    navigate('/login');
+  };
+
+  // Jika user info belum loaded, tampilkan loading
+  if (!userInfo) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <LoadingSpinner size="lg" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
@@ -86,6 +154,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             >
               <X className="w-5 h-5" />
             </button>
+          </div>
+
+          {/* User Info */}
+          <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
+                <User className="w-4 h-4 text-gray-600 dark:text-gray-300" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-gray-900 dark:text-white">
+                  {userInfo.username}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 capitalize">
+                  {userInfo.role}
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Navigation */}
@@ -124,6 +209,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Sun className="w-5 h-5 mr-3" />
               )}
               {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+            </button>
+          </div>
+
+          {/* Logout Button */}
+          <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+            <button
+              onClick={handleLogout}
+              className="flex items-center w-full px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-150"
+            >
+              <LogOut className="w-5 h-5 mr-3" />
+              Logout
             </button>
           </div>
         </div>

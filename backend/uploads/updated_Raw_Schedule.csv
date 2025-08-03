@@ -1,0 +1,879 @@
+Program Session,Major,Curriculum,Class,Subject,Cr,Room,Sched. Time
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Introduction to Agricultural Mechanical Engineering,3.0,B306,Mon3
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Agribusiness Innovation Management,3.0,B409,Thu3
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Academic Writing,0.0,B203,Tue5
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Academic Writing,0.0,B411,Wed4
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Remote Sensing and Spatial Planning,2.0,B302,Wed4
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Data Analytics for Agribusiness,2.0,B210,Mon5
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Food System,3.0,B206,Thu3
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Regional Planning and Development,2.0,B409,Mon1
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Agricultural Economic,2.0,B304,Mon3
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Food Enterpreneurship,3.0,B210,Fri2
+M,PS_AB,AB-2023,M AB-2023 Smart-Agri Innovation,Microeconomics,3.0,B404,Fri5
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Microeconomics,3.0,B104,Mon4
+M,PS_AB,AB-2024,M AB-2024 AB-2024,Agribusiness Marketing,3.0,B108,Mon3
+M,PS_AB,AB-2024,M AB-2024 AB-2024,Mathematics,3.0,B407,Thu5
+M,PS_AB,AB-2024,M AB-2024 AB-2024,Survival English,0.0,B404,Tue3
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Perspective of Tourism,2.0,B105,Thu5
+M,PS_AB,AB-2023,M AB-2023 Food Tech & Agrotourism,Agricultural Economic,2.0,B311,Mon3
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Architectural Heritage,2.0,C203 (Architecture Laboratory) (PUCC),Tue1
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Urban Architecture,2.0,C203 (Architecture Laboratory) (PUCC),Wed2
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Landscape Design,3.0,C204 (Architecture Laboratory) (PUCC),Wed2
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Building Construction 1,3.0,C203 (Architecture Laboratory) (PUCC),Mon1
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Basic Design Principles,3.0,C203 (Architecture Laboratory) (PUCC),Mon3
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Architecture Design Studio 1,6.0,C203 (Architecture Laboratory) (PUCC),Mon5
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,History of Architecture,3.0,C203 (Architecture Laboratory) (PUCC),Fri1
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Introduction to Architecture,2.0,C203 (Architecture Laboratory) (PUCC),Thu1
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Economic Survival 1: Business Creation / Internship Experience,3.0,C203 (Architecture Laboratory) (PUCC),Tue4
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Architecture Design Studio 3,6.0,C203 (Architecture Laboratory) (PUCC),Thu2
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Architecture Basic Design Studio 1,4.0,C204 (Architecture Laboratory) (PUCC),Wed3
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Architectural Drawing,3.0,C204 (Architecture Laboratory) (PUCC),Thu3
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Urban Design,3.0,C203 (Architecture Laboratory) (PUCC),Wed3
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Building Utilities,2.0,C204 (Architecture Laboratory) (PUCC),Wed4
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Architectural Research Method,2.0,C204 (Architecture Laboratory) (PUCC),Mon5
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Architectural Behavior and Environment,2.0,C203 (Architecture Laboratory) (PUCC),Tue5
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Ethics in Architecture,3.0,C204 (Architecture Laboratory) (PUCC),Tue1
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Project Management,2.0,C203 (Architecture Laboratory) (PUCC),Mon2
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Architecture Basic Design Studio 1 (Studio),0.0,C204 (Architecture Laboratory) (PUCC),Thu5
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Architecture Design Studio 1 (Studio),0.0,C204 (Architecture Laboratory) (PUCC),Wed1
+M,PS_AR,ARC-2024,M ARC-2024 ARC 2024,Survival English,0.0,C203 (Architecture Laboratory) (PUCC),Tue2
+M,PS_AR,ARC-2022,M ARC-2022 ARC 2022,Architecture Design Studio 3 (Studio),0.0,C204 (Architecture Laboratory) (PUCC),Fri2
+M,PS_AR,ARC-2023,M ARC-2023 ARC 2023,Academic Writing,0.0,C203 (Architecture Laboratory) (PUCC),Mon4
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Auditing 1,3.0,B202,Thu1
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Auditing 1,3.0,B205,Wed4
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,Auditing 1,3.0,B406,Thu5
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,Tax Auditing,3.0,B102,Wed2
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,International Tax/Transfer Pricing,3.0,B304,Mon4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Economic Survival 1: Business Creation / Internship Experience,3.0,B201,Thu5
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Economic Survival 1: Business Creation / Internship Experience,3.0,B301,Fri4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Economic Survival 1: Business Creation / Internship Experience,3.0,B401,Mon1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Principle of Accounting 1,3.0,B408,Mon3
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Principle of Accounting 1,3.0,B209,Fri2
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Principle of Accounting 1,3.0,B302,Thu4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Principles of Accounting 2,3.0,B403,Wed2
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Auditing 1,3.0,B304,Thu5
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,Managerial Accounting,3.0,B303,Wed4
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Cost Accounting,3.0,B302,Mon5
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Managerial Accounting,3.0,B404,Tue2
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Managerial Accounting,3.0,A420,Tue2
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,Cost Accounting,3.0,B411,Thu2
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,Intermediate Accounting 2,3.0,B206,Mon4
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Intermediate Accounting 2,3.0,B405,Fri2
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Intermediate Accounting 2,3.0,B307,Mon4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Economic Survival 1: Business Creation / Internship Experience,3.0,B403,Tue1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Principle of Accounting 1,3.0,B407,Tue5
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Principles of Accounting 2,3.0,B408,Fri1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Introduction to Business,3.0,B304,Fri1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Economics (Macro/Micro),3.0,B204,Tue5
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Accounting Professional Ethics,3.0,B407,Wed1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Principles of Accounting 2,3.0,B407,Mon4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-4,Survival English,0.0,B310,Thu4
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Managerial Accounting,3.0,B101,Wed4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Principles of Accounting 2,3.0,B211,Thu2
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Intermediate Accounting 2,3.0,B410,Tue4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Survival English,0.0,B403,Fri2
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Academic Writing,0.0,B102,Thu2
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Introduction to Business,3.0,B205,Wed5
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Introduction to Business,3.0,B308,Thu3
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Introduction to Business,3.0,A420,Thu3
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Economics (Macro/Micro),3.0,B204,Mon1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Economics (Macro/Micro),3.0,B205,Wed2
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Economics (Macro/Micro),3.0,B201,Wed4
+M,PS_Ak,ACC-2024,M ACC-2024 Class-1,Accounting Professional Ethics,3.0,B308,Fri5
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Accounting Professional Ethics,3.0,B303,Wed1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Accounting Professional Ethics,3.0,A420,Mon5
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Equity,3.0,B210,Mon4
+M,PS_Ak,ACC-2023,M ACC-2023 Capital Market,Derivatives/Fixed Income,3.0,B209,Wed3
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Tax Auditing,3.0,B307,Fri4
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Tax Auditing,3.0,B208,Mon4
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Risk Based Auditing,3.0,B105,Tue3
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Risk Based Auditing,3.0,B411,Fri5
+M,PS_Ak,ACC-2022,M ACC-2022 Class-1,Advanced Cost Accounting,3.0,B205,Tue1
+M,PS_Ak,ACC-2022,M ACC-2022 Class-3,Advanced Cost Accounting,3.0,B102,Tue5
+M,PS_Ak,ACC-2022,M ACC-2022 Class-2,Advanced Cost Accounting,3.0,B311,Mon5
+M,PS_Ak,ACC-2023,M ACC-2023 Taxation,Academic Writing,0.0,B302,Thu2
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Academic Writing,0.0,B104,Tue1
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Academic Writing,0.0,B405,Mon1
+M,PS_Ak,ACC-2024,M ACC-2024 Class-3,Survival English,0.0,B204,Thu2
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing2,Cost Accounting,3.0,B207,Wed5
+M,PS_Ak,ACC-2023,M ACC-2023 Auditing1,Cost Accounting,3.0,B308,Mon2
+M,PS_Ak,ACC-2024,M ACC-2024 Class-2,Survival English,0.0,B103,Mon5
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Survival English,0.0,B102,Tue2
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Accounting for Decision Making,3.0,B404,Fri1
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Survival English,0.0,B209,Wed5
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Accounting for Decision Making,3.0,B308,Mon5
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Introduction to Business,3.0,B411,Tue1
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Introduction to Business,3.0,B102,Tue4
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Digital  Literacy,3.0,B204,Tue2
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Digital  Literacy,3.0,B304,Wed5
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Economic Survival 1: Business Creation / Internship Experience,3.0,B306,Tue2
+M,PS_BA,BA-2023,M BA-2023 HOSPITALITY AND TOURISM BUSINESS,Academic Writing,0.0,B207,Wed1
+M,PS_BA,BA-2023,M BA-2023 GLOBAL BUSINESS,Academic Writing,0.0,B310,Tue4
+M,PS_BA,BA-2023,M BA-2023 DIGITAL BUSINESS,Academic Writing,0.0,B406,Fri4
+M,PS_BA,BA-2024,M BA-2024 CLASS 3,Survival English,0.0,B203,Wed2
+M,PS_BA,BA-2024,M BA-2024 CLASS 2,Survival English,0.0,B404,Thu5
+M,PS_BA,BA-2024,M BA-2024 CLASS 1,Survival English,0.0,B301,Thu1
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Microeconomics,3.0,B204,Thu3
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Microeconomics,3.0,B411,Mon3
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Economic Survival 1: Business Creation / Internship Experience,3.0,B307,Tue3
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Digital  Literacy,3.0,B405,Thu4
+M,PS_BA,BA-2024,M BA-2024 CLASS 5,Business Mathematics,3.0,B407,Thu4
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Accounting for Decision Making,3.0,B201,Wed1
+M,PS_BA,,M PS_BA Multimodal Communication,Multimodal Communication,3.0,B306,Wed4
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Survival English,0.0,B307,Mon3
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Business Mathematics,3.0,B202,Mon3
+M,PS_BA,,M PS_BA Statistics and Data Literacy,Statistics and Data Literacy,3.0,B305,Fri1
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Economic Survival 1: Business Creation / Internship Experience,3.0,B404,Wed2
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Microeconomics,3.0,B205,Mon4
+M,PS_BA,BA-2024,M BA-2024 CLASS 6,Business Mathematics,3.0,B204,Fri1
+M,PS_BA,BA-2024,M BA-2024 CLASS 4,Introduction to Business,3.0,B405,Wed4
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Public Furniture Design,3.0,C201 (Interior Design Laboratory) (PUCC),Wed2
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Design Research Methods,3.0,C201 (Interior Design Laboratory) (PUCC),Fri4
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Digital Presentation Techniques 1,3.0,C201 (Interior Design Laboratory) (PUCC),Mon3
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Interior Design 2: Retail Space,3.0,C201 (Interior Design Laboratory) (PUCC),Mon5
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Human Comfort in Interior Design,3.0,C201 (Interior Design Laboratory) (PUCC),Thu5
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Adaptive Design,3.0,C201 (Interior Design Laboratory) (PUCC),Thu1
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,History of Western Interior Design,2.0,C201 (Interior Design Laboratory) (PUCC),Tue1
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Color and Light,2.0,C201 (Interior Design Laboratory) (PUCC),Thu4
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Introduction to Interior Design Studies,3.0,C201 (Interior Design Laboratory) (PUCC),Mon1
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Ergonomic and Anthropometry,2.0,C201 (Interior Design Laboratory) (PUCC),Wed3
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Design Drawing and Visualization,3.0,C201 (Interior Design Laboratory) (PUCC),Fri5
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Digital Presentation Techniques 1,0.0,C201 (Interior Design Laboratory) (PUCC),Wed5
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Interior Design 2: Retail Space,0.0,C201 (Interior Design Laboratory) (PUCC),Tue2
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Basic Design Principles,3.0,C201 (Interior Design Laboratory) (PUCC),Wed1
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,C201 (Interior Design Laboratory) (PUCC),Fri2
+M,PS_DI,ID-2023,M ID-2023 ID 2023 Class 1,Academic Writing,0.0,C201 (Interior Design Laboratory) (PUCC),Fri1
+M,PS_DI,ID-2024,M ID-2024 ID 2024 Class 1,Survival English,0.0,C201 (Interior Design Laboratory) (PUCC),Tue3
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Academic Writing,0.0,B110 (VCD),Wed4
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,Basic Design Principles,3.0,B110 (VCD),Thu4
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,Survival English,0.0,B109 (VCD),Fri5
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Academic Writing,0.0,B109 (VCD),Mon2
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,Design History,3.0,LabA210,Wed1
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,Survival English,0.0,B109 (VCD),Tue5
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,Design Thinking and Psychology of Perception,3.0,LabA210,Fri2
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,Survival English,0.0,LabA210,Tue2
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,"Digital Literacy, Communication and Media Studies",3.0,B110 (VCD),Thu3
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,Basic Drawing,3.0,B110 (VCD),Tue3
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Intermediate Computer Graphics,3.0,B110 (VCD),Fri2
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,New and Emerging Media,3.0,B110 (VCD),Thu2
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 3,Economic Survival 1: Business Creation / Internship Experience,3.0,B110 (VCD),Mon1
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,Design Thinking and Psychology of Perception,3.0,B109 (VCD),Wed1
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Photography and Digital Imaging,3.0,B109 (VCD),Thu4
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,Design History,3.0,LabA210,Tue3
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,Design History,3.0,LabA210,Wed3
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Visual Brand Design,3.0,LabA210,Tue5
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,Design Thinking and Psychology of Perception,3.0,LabA210,Mon3
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,"Digital Literacy, Communication and Media Studies",3.0,LabA210,Mon1
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,"Digital Literacy, Communication and Media Studies",3.0,LabA210,Tue1
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,Basic Drawing,3.0,B110 (VCD),Mon3
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,Basic Drawing,3.0,B110 (VCD),Wed1
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Layout Design,3.0,LabA210,Fri1
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,Basic Design Principles,3.0,LabA210,Thu3
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,Basic Design Principles,3.0,B110 (VCD),Thu5
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,B110 (VCD),Wed2
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Audio Visual Production Methods,3.0,LabA210,Tue4
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Intermediate Computer Graphics,3.0,LabA210,Thu5
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Nusantara Visual Culture,3.0,B110 (VCD),Mon4
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Illustration,3.0,B110 (VCD),Fri1
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Illustration,3.0,LabA210,Wed5
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Photography and Cinematography,3.0,B109 (VCD),Tue3
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Animation & Games,Basic Animation,3.0,B109 (VCD),Wed4
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Visual Brand Design,3.0,B110 (VCD),Tue1
+M,PS_DKV_2017,VCD-2024,M VCD-2024 VCD 2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,LabA210,Mon4
+M,PS_DKV_2017,VCD-2023,M VCD-2023 VCD 2023 Graphic Design & Emerging Media,Nusantara Visual Culture,3.0,LabA210,Thu2
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,International Security,3.0,B108,Thu3
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,International Security,3.0,B208,Mon2
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,French 1,3.0,B301,Mon4
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,French 1,3.0,B402,Thu4
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,French 1,3.0,B301,Wed4
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,Academic Writing,0.0,B210,Thu4
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,Mandarin 1,3.0,B102,Tue1
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,Japanese 1,3.0,B208,Thu1
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,Japanese 1,3.0,B209,Tue3
+M,PS_HI,IR-2024,M IR-2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,B211,Tue4
+M,PS_HI,IR-2024,M IR-2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,B202,Wed2
+M,PS_HI,IR-2024,M IR-2024 Class 3,Economic Survival 1: Business Creation / Internship Experience,3.0,B209,Mon4
+M,PS_HI,IR-2024,M IR-2024 Class 4,Economic Survival 1: Business Creation / Internship Experience,3.0,B404,Wed3
+M,PS_HI,IR-2024,M IR-2024 Class 5,Economic Survival 1: Business Creation / Internship Experience,3.0,B104,Thu2
+M,PS_HI,IR-2024,M IR-2024 Class 6,Economic Survival 1: Business Creation / Internship Experience,3.0,B310,Mon3
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,Mandarin 1,3.0,B208,Thu3
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,International Security,3.0,B401,Fri4
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,International Political Economy,3.0,B208,Mon1
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,International Security,3.0,B301,Wed1
+M,PS_HI,IR-2024,M IR-2024 Class 4,Survival English,0.0,B103,Fri4
+M,PS_HI,IR-2022,M IR-2022 Class 1,Civil Society Organization in International Relations (Project-based),3.0,B302,Tue5
+M,PS_HI,IR-2022,M IR-2022 Class 2,East Asia in the World,3.0,B105,Thu1
+M,PS_HI,IR-2022,M IR-2022 Class 3,World War and World Orders,3.0,B310,Tue1
+M,PS_HI,IR-2022,M IR-2022 Class 4,Migration and Multiculturalism,3.0,B207,Mon3
+M,PS_HI,IR-2022,M IR-2022 Class 5,Negotiation Technique and Lobbying,3.0,B108,Wed1
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,Foreign Policy Analysis,3.0,B404,Thu2
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,Foreign Policy Analysis,3.0,B407,Thu2
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,Foreign Policy Analysis,3.0,B304,Tue3
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,Foreign Policy Analysis,3.0,B411,Thu4
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,International Security,3.0,B203,Tue4
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,Foreign Policy Analysis,3.0,B409,Mon5
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,Foreign Policy Analysis,3.0,B305,Mon5
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,International Political Economy,3.0,B304,Wed3
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,International Political Economy,3.0,B104,Thu4
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,International Political Economy,3.0,B304,Tue1
+M,PS_HI,IR-2024,M IR-2024 Class 7,Economic Survival 1: Business Creation / Internship Experience,3.0,A420,Wed4
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,International Political Economy,3.0,B209,Mon5
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,International Political Economy,3.0,B304,Mon2
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,International Political Economy,3.0,B403,Tue2
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,International Security,3.0,B103,Tue3
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,International Security,3.0,B208,Fri2
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,Foreign Policy Analysis,3.0,B406,Thu3
+M,PS_HI,IR-2024,M IR-2024 Class 1,Leadership,3.0,B406,Wed4
+M,PS_HI,IR-2024,M IR-2024 Class 5,Leadership,3.0,B308,Fri4
+M,PS_HI,IR-2024,M IR-2024 Class 3,Leadership,3.0,B406,Tue1
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,International Migration,3.0,B210,Tue3
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,International Culture and Communication,3.0,B405,Thu3
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,International Culture and Communication,3.0,B103,Tue1
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,Public Diplomacy,3.0,B310,Mon1
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,Public Diplomacy,3.0,B311,Tue2
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,World Wars and World Orders,3.0,B401,Thu2
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,Digital Literacy and Communication,3.0,B201,Mon5
+M,PS_HI,IR-2024,M IR-2024 Class 3,Introduction to Political Science,3.0,A421,Tue2
+M,PS_HI,IR-2024,M IR-2024 Class 4,Introduction to Political Science,3.0,B304,Mon1
+M,PS_HI,IR-2024,M IR-2024 Class 5,Introduction to Political Science,3.0,B408,Thu2
+M,PS_HI,IR-2024,M IR-2024 Class 6,Introduction to Political Science,3.0,B302,Thu5
+M,PS_HI,IR-2024,M IR-2024 Class 7,Introduction to Political Science,3.0,B408,Mon2
+M,PS_HI,IR-2024,M IR-2024 Class 2,Introduction to Political Science,3.0,B105,Wed3
+M,PS_HI,IR-2024,M IR-2024 Class 1,Foundation in Social Sciences and Humanities,3.0,B302,Fri1
+M,PS_HI,IR-2024,M IR-2024 Class 3,Foundation in Social Sciences and Humanities,3.0,B105,Fri4
+M,PS_HI,IR-2024,M IR-2024 Class 4,Foundation in Social Sciences and Humanities,3.0,B206,Thu5
+M,PS_HI,IR-2024,M IR-2024 Class 5,Foundation in Social Sciences and Humanities,3.0,B411,Thu1
+M,PS_HI,IR-2024,M IR-2024 Class 6,Foundation in Social Sciences and Humanities,3.0,B207,Thu4
+M,PS_HI,IR-2024,M IR-2024 Class 7,Foundation in Social Sciences and Humanities,3.0,B411,Tue2
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,Economic and Commercial Diplomacy,3.0,B310,Wed5
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,Academic Writing,0.0,B104,Wed4
+M,PS_HI,IR-2023,M IR-2023 Class 2 French,Academic Writing,0.0,A420,Fri2
+M,PS_HI,IR-2023,M IR-2023 Class 3 French,Academic Writing,0.0,B207,Fri5
+M,PS_HI,IR-2023,M IR-2023 Class 4 Japanese,Academic Writing,0.0,B202,Wed3
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,Academic Writing,0.0,B310,Thu5
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,Academic Writing,0.0,B306,Fri4
+M,PS_HI,IR-2024,M IR-2024 Class 2,Foundation in Social Sciences and Humanities,3.0,B311,Mon1
+M,PS_HI,IR-2024,M IR-2024 Class 2,Leadership,3.0,B302,Mon3
+M,PS_HI,IR-2024,M IR-2024 Class 1,Introduction to Political Science,3.0,B411,Wed1
+M,PS_HI,IR-2024,M IR-2024 Class 6,Statistics and Data Literacy,3.0,B305,Thu3
+M,PS_HI,IR-2024,M IR-2024 Class 4,Leadership,3.0,B207,Fri4
+M,PS_HI,IR-2024,M IR-2024 Class 1,Survival English,0.0,B303,Fri2
+M,PS_HI,IR-2024,M IR-2024 Class 6,Leadership,3.0,B307,Wed3
+M,PS_HI,IR-2024,M IR-2024 Class 7,Leadership,3.0,B208,Thu2
+M,PS_HI,IR-2024,M IR-2024 Class 1,First-Year Writing Seminar,3.0,B311,Thu2
+M,PS_HI,IR-2024,M IR-2024 Class 2,First-Year Writing Seminar,3.0,B307,Wed5
+M,PS_HI,IR-2024,M IR-2024 Class 3,First-Year Writing Seminar,3.0,B303,Fri5
+M,PS_HI,IR-2024,M IR-2024 Class 4,First-Year Writing Seminar,3.0,B404,Wed4
+M,PS_HI,IR-2024,M IR-2024 Class 5,First-Year Writing Seminar,3.0,B206,Thu2
+M,PS_HI,IR-2024,M IR-2024 Class 6,First-Year Writing Seminar,3.0,B203,Mon2
+M,PS_HI,IR-2024,M IR-2024 Class 7,First-Year Writing Seminar,3.0,B203,Wed5
+M,PS_HI,IR-2024,M IR-2024 Class 1,Statistics and Data Literacy,3.0,B105,Fri5
+M,PS_HI,IR-2024,M IR-2024 Class 7,Statistics and Data Literacy,3.0,B405,Tue4
+M,PS_HI,IR-2024,M IR-2024 Class 2,Statistics and Data Literacy,3.0,B407,Tue4
+M,PS_HI,IR-2024,M IR-2024 Class 4,Statistics and Data Literacy,3.0,B408,Tue4
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,Study of War and Peace,3.0,B407,Mon3
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,Globalization and Social Change,3.0,B302,Tue3
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,Environmental Issues in IR,3.0,B302,Mon4
+M,PS_HI,IR-2023,M IR-2023 Class 6 Mandarin,International Humanitarian Law,3.0,B308,Tue4
+M,PS_HI,IR-2023,M IR-2023 Class 7 Mandarin,Negotiation Technique and Lobbying,3.0,B209,Tue2
+M,PS_HI,IR-2023,M IR-2023 Class 5 Japanese,Negotiation Technique and Lobbying,3.0,B211,Wed2
+M,PS_HI,IR-2024,M IR-2024 Class 7,Survival English,0.0,B401,Tue4
+M,PS_HI,IR-2023,M IR-2023 Class 1 French,Politics of ASEAN Member States,3.0,B303,Thu5
+M,PS_HI,IR-2024,M IR-2024 Class 3,Survival English,0.0,B404,Mon2
+M,PS_HI,IR-2024,M IR-2024 Class 2,Survival English,0.0,B103,Wed2
+M,PS_HI,IR-2024,M IR-2024 Class 5,Statistics and Data Literacy,3.0,B204,Fri5
+M,PS_HI,IR-2024,M IR-2024 Class 3,Statistics and Data Literacy,3.0,B208,Wed2
+M,PS_HI,IR-2024,M IR-2024 Class 5,Survival English,0.0,B307,Tue4
+M,PS_HI,IR-2024,M IR-2024 Class 6,Survival English,0.0,B303,Thu1
+M,PS_HI,IR-2024,M IR-2024 Class 10,Introduction to Political Science,3.0,B409,Tue4
+M,PS_HI,IR-2024,M IR-2024 Class 10,Statistics and Data Literacy,3.0,B402,Thu3
+M,PS_HI,IR-2024,M IR-2024 Class 9,Introduction to Political Science,3.0,B408,Tue1
+M,PS_HI,IR-2024,M IR-2024 Class 8,Introduction to Political Science,3.0,B404,Tue1
+M,PS_HI,IR-2024,M IR-2024 Class 8,Foundation in Social Sciences and Humanities,3.0,B201,Fri4
+M,PS_HI,IR-2024,M IR-2024 Class 9,Foundation in Social Sciences and Humanities,3.0,B402,Thu2
+M,PS_HI,IR-2024,M IR-2024 Class 9,Survival English,0.0,B401,Fri1
+M,PS_HI,IR-2024,M IR-2024 Class 8,Survival English,0.0,B401,Fri5
+M,PS_HI,IR-2024,M IR-2024 Class 10,Foundation in Social Sciences and Humanities,3.0,B309,Wed5
+M,PS_HI,IR-2024,M IR-2024 Class 8,Statistics and Data Literacy,3.0,B411,Fri1
+M,PS_HI,IR-2024,M IR-2024 Class 10,Survival English,0.0,B401,Tue3
+M,PS_HI,IR-2024,M IR-2024 Class 8,Leadership,3.0,B201,Fri5
+M,PS_HI,IR-2024,M IR-2024 Class 9,Leadership,3.0,B302,Wed2
+M,PS_HI,IR-2024,M IR-2024 Class 10,First-Year Writing Seminar,3.0,B402,Tue3
+M,PS_HI,IR-2024,M IR-2024 Class 10,Leadership,3.0,B410,Mon4
+M,PS_HI,IR-2024,M IR-2024 Class 10,Economic Survival 1: Business Creation / Internship Experience,3.0,B203,Wed1
+M,PS_HI,IR-2024,M IR-2024 Class 9,Economic Survival 1: Business Creation / Internship Experience,3.0,B202,Tue5
+M,PS_HI,IR-2024,M IR-2024 Class 8,Economic Survival 1: Business Creation / Internship Experience,3.0,B208,Tue5
+M,PS_HI,IR-2024,M IR-2024 Class 9,Statistics and Data Literacy,3.0,B203,Thu5
+M,PS_HI,IR-2024,M IR-2024 Class 8,First-Year Writing Seminar,3.0,B309,Mon3
+M,PS_HI,IR-2024,M IR-2024 Class 9,First-Year Writing Seminar,3.0,B103,Thu5
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,Introduction to Law,3.0,B409,Fri5
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,Introduction to Law,3.0,A424,Tue2
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,Introduction to Law,3.0,B302,Wed5
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,Legal Industry and Career Preparation,3.0,B306,Tue3
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,English for Lawyers 1,3.0,B308,Fri1
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,English for Lawyers 1,3.0,B105,Thu3
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,English for Lawyers 1,3.0,B403,Wed3
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,International Law in Indonesian Law,3.0,B102,Fri5
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,English for Lawyers 1,3.0,B306,Thu5
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,Legal Industry and Career Preparation,3.0,B102,Thu3
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,Legal Reasoning and Research Methodology,3.0,B406,Mon5
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,Legal Industry and Career Preparation,3.0,B206,Tue3
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,International and Regional Organizations,3.0,A424,Wed1
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,Survival English,0.0,B201,Wed5
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,Indonesian and International Extradition Laws,3.0,B208,Tue1
+M,PS_Hukum,LAW-2022,M LAW-2022 Corporate Law,Legal Project,3.0,B403,Fri4
+M,PS_Hukum,LAW-2022,M LAW-2022 General Law,Legal Project,3.0,B101,Tue2
+M,PS_Hukum,LAW-2022,M LAW-2022 International Law,Legal Project,3.0,B207,Tue5
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 2,Contract Law,3.0,B308,Thu1
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 2,Land and Property for Corporate Lawyers,3.0,B205,Tue5
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 2,Capital Market Law,3.0,B308,Mon1
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 2,Mergers and Acquisitions Law,3.0,B403,Mon4
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 2,Trade and Tax Law,3.0,B411,Thu5
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 2,Academic Writing,0.0,B402,Fri1
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,English for Lawyers 1,3.0,B206,Wed2
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,Legal Industry and Career Preparation,3.0,A424,Fri2
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,Legal Reasoning and Research Methodology,3.0,B207,Thu2
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,Introduction to Law,3.0,B301,Mon1
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,Introduction to Indonesian Law,3.0,B103,Tue4
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,Economic Survival 1: Business Creation / Internship Experience,3.0,B408,Thu3
+M,PS_Hukum,,M PS_Hukum Indonesian Language,Indonesian Language,3.0,B205,Thu1
+M,PS_Hukum,,M PS_Hukum Pancasila,Pancasila,2.0,B311,Wed3
+M,PS_Hukum,,M PS_Hukum Citizenship,Citizenship,2.0,B105,Mon3
+M,PS_Hukum,,M PS_Hukum Religion,Religion,2.0,B211,Tue3
+M,PS_Hukum,,M PS_Hukum Pre-Internship,Pre-Internship,1.0,B102,Mon1
+M,PS_Hukum,LAW-2024,M LAW-2024 -6,Survival English,0.0,B108,Tue5
+M,PS_Hukum,,M PS_Hukum Golf Class,Golf Class,3.0,A420,Fri5
+M,PS_Hukum,,M PS_Hukum Golf Class Non-Credits,Golf Class Non-Credits,0.0,B403,Mon1
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,International Environmental Law,3.0,B411,Tue3
+M,PS_Hukum,,M PS_Hukum Music Orchestra 2,Music Orchestra 2,3.0,B209,Thu5
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,Legal Industry and Career Preparation,3.0,B105,Mon5
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,Legal Reasoning and Research Methodology,3.0,B301,Mon3
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Introduction to U.S. Law,3.0,B105,Tue2
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,Introduction to U.S. Law,3.0,A421,Wed3
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Introduction to U.S. Law,3.0,B303,Tue5
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Private Procedural Law,3.0,B402,Wed1
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Criminal Procedural Law,3.0,B201,Wed2
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Constitutional Procedural Law,3.0,B409,Mon4
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Administrative Procedural Law,3.0,B310,Wed2
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Family and Islamic Law,3.0,B206,Wed1
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,Legal Reasoning and Research Methodology,3.0,B408,Fri5
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,Economic Survival 1: Business Creation / Internship Experience,3.0,B308,Tue3
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,Economic Survival 1: Business Creation / Internship Experience,3.0,B303,Thu2
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Trade and Tax Law,3.0,B403,Thu4
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,Introduction to Indonesian Law,3.0,B108,Fri5
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,Legal Industry and Career Preparation,3.0,B103,Fri1
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,English for Lawyers 1,3.0,B203,Mon1
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,Economic Survival 1: Business Creation / Internship Experience,3.0,B401,Thu3
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,Introduction to Law,3.0,B207,Mon1
+M,PS_Hukum,,M PS_Hukum Projects: Video Editing for TikTok Content I,Projects: Video Editing for TikTok Content I,3.0,B411,Mon1
+M,PS_Hukum,,M PS_Hukum Projects: Video Editing for TikTok Content I Non Credits,Projects: Video Editing for TikTok Content I Non Credits,0.0,B308,Mon3
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,Economic Survival 1: Business Creation / Internship Experience,3.0,B309,Fri2
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,Economic Survival 1: Business Creation / Internship Experience,3.0,B104,Mon3
+M,PS_Hukum,,M PS_Hukum Music Orchestra 1 Non-Credits,Music Orchestra 1 Non-Credits,0.0,B104,Wed2
+M,PS_Hukum,,M PS_Hukum Survival English (Batch 2022),Survival English,0.0,B410,Mon2
+M,PS_Hukum,,M PS_Hukum Vocal Technique 1 Non-Credits,Vocal Technique 1 Non-Credits,0.0,B103,Fri2
+M,PS_Hukum,LAW-2024,M LAW-2024 -5,Legal Reasoning and Research Methodology,3.0,B104,Fri1
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Mergers and Acquisitions Law,3.0,B302,Tue1
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,Law of Treaties,3.0,B310,Tue2
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Land and Property for Corporate Lawyers,3.0,B407,Wed3
+M,PS_Hukum,LAW-2023,M LAW-2023 Litigation Law,Academic Writing,0.0,B304,Tue4
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,Introduction to Indonesian Law,3.0,B208,Tue3
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,Survival English,0.0,B209,Thu3
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,Survival English,0.0,B411,Thu3
+M,PS_Hukum,LAW-2024,M LAW-2024 -2,Introduction to Indonesian Law,3.0,B411,Wed2
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,Introduction to Indonesian Law,3.0,B301,Tue1
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Capital Market Law,3.0,B407,Mon5
+M,PS_Hukum,LAW-2023,M LAW-2023 International Law,Academic Writing,0.0,B102,Wed3
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,Introduction to Indonesian Law,3.0,B404,Mon1
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Academic Writing,0.0,B402,Tue2
+M,PS_Hukum,LAW-2024,M LAW-2024 -4,Survival English,0.0,B310,Wed1
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,Introduction to Law,3.0,B101,Wed1
+M,PS_Hukum,LAW-2024,M LAW-2024 -1,Legal Reasoning and Research Methodology,3.0,B405,Mon5
+M,PS_Hukum,LAW-2023,M LAW-2023 Corporate Law 1,Contract Law,3.0,B103,Thu2
+M,PS_Hukum,LAW-2024,M LAW-2024 -3,Survival English,0.0,B102,Fri2
+M,PS_IA,ACS-2024,M ACS-2024 CLASS 1,Survival English,0.0,B308,Thu5
+M,PS_IA,ACS-2023,M ACS-2023 CLASS 1,Academic Writing,0.0,B401,Mon3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,Quantitative Communication Research Method,3.0,B309,Mon5
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,Quantitative Communication Research Method,3.0,B201,Fri1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,Multimodal Communication,3.0,B105,Fri2
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,Multimodal Communication,3.0,B409,Fri4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,Quantitative Communication Research Method,3.0,B308,Wed3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,News Writing,3.0,B205,Tue4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,Multimodal Communication,3.0,B101,Mon4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,News Writing,3.0,B309,Mon4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,News Writing,3.0,B204,Mon3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,Intercultural Communication,3.0,B301,Tue2
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Logic and Critical Thinking,3.0,B104,Wed3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,Intercultural Communication,3.0,B102,Mon3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,Intercultural Communication,3.0,B406,Mon1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,Basic Camera,3.0,B208,Wed3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,News Writing,3.0,B203,Thu4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,Multimodal Communication,3.0,B406,Mon3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Introduction to Communication,3.0,B103,Mon1
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Photography for Communication,3.0,B104,Wed1
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Economic Survival 1: Business Creation / Internship Experience,3.0,B405,Tue3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Introduction to Communication,3.0,B302,Thu1
+M,PS_IKom,COMM-2022,M COMM-2022 PR Class 2,Media Programming,3.0,B302,Mon1
+M,PS_IKom,COMM-2022,M COMM-2022 PR Class 1,Media Programming,3.0,B404,Thu1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,Academic Writing,0.0,B206,Fri5
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,Academic Writing,0.0,B311,Thu3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,Academic Writing,0.0,B210,Tue5
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,Academic Writing,0.0,B304,Tue5
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Photography for Communication,3.0,A420,Mon1
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Survival English,0.0,B406,Mon4
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Survival English,0.0,B304,Wed4
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Logic and Critical Thinking,3.0,B307,Fri5
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Introduction to Communication,3.0,B311,Tue5
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Introduction to Communication,3.0,B103,Wed3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Writing for Communication,3.0,B202,Wed1
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Writing for Communication,3.0,B103,Tue2
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Writing for Communication,3.0,B409,Thu2
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Photography for Communication,3.0,B403,Tue5
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Survival English,0.0,B408,Wed3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Economic Survival 1: Business Creation / Internship Experience,3.0,B306,Thu3
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,Quantitative Communication Research Method,3.0,B303,Wed2
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Public Speaking,3.0,B407,Tue1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,Social Media and Big Data,3.0,B308,Mon4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,Social Media and Big Data,3.0,B108,Fri2
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Logic and Critical Thinking,3.0,B410,Tue1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,Social Media and Big Data,3.0,A421,Thu1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,Social Media and Big Data,3.0,B402,Wed3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,B211,Mon4
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Public Speaking,3.0,B411,Wed3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Public Speaking,3.0,B401,Thu4
+M,PS_IKom,COMM-2024,M COMM-2024 Class 1,Logic and Critical Thinking,3.0,B301,Thu5
+M,PS_IKom,COMM-2023,M COMM-2023 Class 3,Basic Camera,3.0,B301,Wed2
+M,PS_IKom,COMM-2024,M COMM-2024 Class 3,Public Speaking,3.0,B404,Tue4
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Survival English,0.0,A421,Tue3
+M,PS_IKom,COMM-2024,M COMM-2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,B207,Wed4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 4,Intercultural Communication,3.0,B204,Mon4
+M,PS_IKom,COMM-2023,M COMM-2023 Class 2,Basic Camera,3.0,B408,Wed1
+M,PS_IKom,COMM-2023,M COMM-2023 Class 1,Basic Camera,3.0,B411,Fri2
+M,PS_IKom,COMM-2022,M COMM-2022 CJ Class,Qualitative Interview,3.0,B408,Tue2
+M,PS_IKom,COMM-2022,M COMM-2022 FTV Class,Qualitative Interview,3.0,B406,Tue4
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Photography for Communication,3.0,B301,Wed5
+M,PS_IKom,COMM-2024,M COMM-2024 Class 4,Writing for Communication,3.0,B401,Thu5
+M,PS_Man,MGT-2024,M MGT-2024 -1,Survival English,0.0,B101,Tue5
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,Academic Writing,0.0,B201,Tue3
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Academic Writing,0.0,B408,Mon5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Academic Writing,0.0,B307,Thu3
+M,PS_Man,MGT-2023,M MGT-2023 BF,Academic Writing,0.0,B105,Tue1
+M,PS_Man,MGT-2024,M MGT-2024 -1,Financial Management,3.0,B402,Tue4
+M,PS_Man,MGT-2024,M MGT-2024 -5,Business Economics,3.0,A421,Mon2
+M,PS_Man,MGT-2023,M MGT-2023 BF,Industrial Psychology,3.0,B203,Thu3
+M,PS_Man,MGT-2024,M MGT-2024 -2,Survival English,0.0,B101,Mon2
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Industrial Psychology,3.0,B402,Tue1
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Industrial Psychology,3.0,B406,Fri5
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,Industrial Psychology,3.0,B409,Thu4
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,Industrial Psychology,3.0,B201,Fri2
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,E-Marketing and E-Commerce,3.0,B411,Mon5
+M,PS_Man,MGT-2024,M MGT-2024 -3,Survival English,0.0,B211,Thu4
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,Academic Writing,0.0,B108,Wed3
+M,PS_Man,MGT-2024,M MGT-2024 -5,Survival English,0.0,B101,Fri1
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,Academic Writing,0.0,B208,Wed5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Academic Writing,0.0,B311,Fri1
+M,PS_Man,MGT-2024,M MGT-2024 -5,Business Mathematics,3.0,B302,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -2,Financial Management,3.0,B205,Thu2
+M,PS_Man,MGT-2024,M MGT-2024 -3,Financial Management,3.0,A421,Tue4
+M,PS_Man,MGT-2024,M MGT-2024 -4,Financial Management,3.0,B307,Mon1
+M,PS_Man,MGT-2024,M MGT-2024 -5,Financial Management,3.0,B402,Tue5
+M,PS_Man,MGT-2024,M MGT-2024 -1,Business Economics,3.0,B201,Mon4
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,Industrial Psychology,3.0,B309,Thu2
+M,PS_Man,MGT-2024,M MGT-2024 -2,Business Economics,3.0,B405,Wed2
+M,PS_Man,MGT-2024,M MGT-2024 -3,Business Economics,3.0,B409,Fri1
+M,PS_Man,MGT-2024,M MGT-2024 -4,Business Mathematics,3.0,B105,Tue4
+M,PS_Man,MGT-2024,M MGT-2024 -4,Business Economics,3.0,B201,Tue5
+M,PS_Man,MGT-2024,M MGT-2024 -4,Survival English,0.0,B406,Tue5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Industrial Psychology,3.0,B303,Mon1
+M,PS_Man,MGT-2023,M MGT-2023 HCM,E-Marketing and E-Commerce,3.0,B310,Thu2
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Financial Statement Analysis,3.0,B406,Tue3
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,Internationalization of Small and Medium Sized Enterprise,3.0,B103,Mon2
+M,PS_Man,MGT-2024,M MGT-2024 -6,Survival English,0.0,B402,Mon4
+M,PS_Man,MGT-2022,M MGT-2022 IB-2,Research Methodology,3.0,B203,Fri1
+M,PS_Man,MGT-2022,M MGT-2022 IB-1,Research Methodology,3.0,B403,Tue4
+M,PS_Man,MGT-2022,M MGT-2022 HCM,Research Methodology,3.0,A421,Fri4
+M,PS_Man,MGT-2022,M MGT-2022 DCM,Research Methodology,3.0,B405,Fri5
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,Internationalization of Small and Medium Sized Enterprise,3.0,A421,Thu3
+M,PS_Man,MGT-2022,M MGT-2022 BF,Research Methodology,3.0,B103,Mon3
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Digital Marketing,3.0,B304,Wed2
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Consumer Behavior,3.0,B302,Tue4
+M,PS_Man,MGT-2023,M MGT-2023 BF,Financial Markets and Institutions,3.0,B302,Fri4
+M,PS_Man,MGT-2023,M MGT-2023 BF,Risk Management,3.0,B406,Wed1
+M,PS_Man,MGT-2023,M MGT-2023 BF,General Banking and Digital Finance,3.0,A424,Thu1
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Performance Management,3.0,B205,Fri5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Advertising and Integrated Marketing Communication,3.0,B201,Tue4
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Financial Statement Analysis,3.0,B408,Mon4
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,Internationalization of Small and Medium Sized Enterprise,3.0,B210,Wed4
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,International Corporate Sustainability,3.0,B101,Thu4
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,Financial Statement Analysis,3.0,B409,Fri2
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,Financial Statement Analysis,3.0,B310,Wed4
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Financial Statement Analysis,3.0,B211,Tue1
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,Financial Statement Analysis,3.0,B402,Fri5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,E-Marketing and E-Commerce,3.0,B101,Wed5
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,E-Marketing and E-Commerce,3.0,B206,Wed3
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,International Corporate Sustainability,3.0,B404,Fri4
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,E-Marketing and E-Commerce,3.0,B307,Mon5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,E-Marketing and E-Commerce,3.0,B404,Wed5
+M,PS_Man,MGT-2023,M MGT-2023 BF,E-Marketing and E-Commerce,3.0,B406,Fri1
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,International Trade,3.0,B403,Mon3
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,International Trade,3.0,B408,Thu1
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,International Trade,3.0,B306,Mon4
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,International Corporate Sustainability,3.0,B108,Tue3
+M,PS_Man,MGT-2024,M MGT-2024 -3,Business Mathematics,3.0,A424,Mon3
+M,PS_Man,MGT-2024,M MGT-2024 -5,Marketing Management,3.0,B311,Fri2
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Digital Marketing,3.0,B305,Mon3
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Advertising and Integrated Marketing Communication,3.0,B205,Thu3
+M,PS_Man,MGT-2024,M MGT-2024 -6,Human Capital Management,3.0,B309,Thu5
+M,PS_Man,MGT-2024,M MGT-2024 -7,Human Capital Management,3.0,B209,Fri5
+M,PS_Man,MGT-2024,M MGT-2024 -6,Marketing Management,3.0,B202,Tue4
+M,PS_Man,MGT-2024,M MGT-2024 -7,Marketing Management,3.0,B311,Mon4
+M,PS_Man,MGT-2024,M MGT-2024 -6,Business Economics,3.0,A424,Tue5
+M,PS_Man,MGT-2024,M MGT-2024 -4,Marketing Management,3.0,B405,Fri1
+M,PS_Man,MGT-2024,M MGT-2024 -7,Economic Survival 1: Business Creation / Internship Experience,3.0,B306,Fri1
+M,PS_Man,MGT-2024,M MGT-2024 -6,Business Mathematics,3.0,B402,Fri4
+M,PS_Man,MGT-2024,M MGT-2024 -6,Financial Management,3.0,B401,Tue1
+M,PS_Man,MGT-2024,M MGT-2024 -7,Business Mathematics,3.0,B404,Mon4
+M,PS_Man,MGT-2024,M MGT-2024 -7,Business Economics,3.0,B203,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -7,Survival English,0.0,A421,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -7,Financial Management,3.0,B310,Thu1
+M,PS_Man,MGT-2024,M MGT-2024 -8,Business Economics,3.0,B105,Wed2
+M,PS_Man,MGT-2024,M MGT-2024 -8,Financial Management,3.0,B210,Fri4
+M,PS_Man,MGT-2024,M MGT-2024 -8,Marketing Management,3.0,B206,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -8,Business Mathematics,3.0,B306,Wed3
+M,PS_Man,MGT-2024,M MGT-2024 -8,Economic Survival 1: Business Creation / Internship Experience,3.0,B308,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -8,Human Capital Management,3.0,B307,Fri2
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Talent Acquisition and Management,3.0,B305,Fri5
+M,PS_Man,MGT-2023,M MGT-2023 BF,Macroeconomics,3.0,B207,Fri1
+M,PS_Man,MGT-2023,M MGT-2023 IB-2,Macroeconomics,3.0,B204,Tue4
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Macroeconomics,3.0,B102,Wed1
+M,PS_Man,MGT-2023,M MGT-2023 IB-4,Macroeconomics,3.0,B207,Tue4
+M,PS_Man,MGT-2024,M MGT-2024 -8,Survival English,0.0,B408,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -1,Business Mathematics,3.0,B305,Tue3
+M,PS_Man,MGT-2024,M MGT-2024 -6,Economic Survival 1: Business Creation / Internship Experience,3.0,B209,Wed4
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Employee Development and Talent Management,3.0,B208,Mon5
+M,PS_Man,MGT-2024,M MGT-2024 -1,Human Capital Management,3.0,B205,Fri2
+M,PS_Man,MGT-2024,M MGT-2024 -5,Economic Survival 1: Business Creation / Internship Experience,3.0,B309,Wed3
+M,PS_Man,MGT-2024,M MGT-2024 -4,Economic Survival 1: Business Creation / Internship Experience,3.0,B202,Tue1
+M,PS_Man,MGT-2024,M MGT-2024 -3,Economic Survival 1: Business Creation / Internship Experience,3.0,B206,Mon5
+M,PS_Man,MGT-2024,M MGT-2024 -2,Economic Survival 1: Business Creation / Internship Experience,3.0,B405,Mon2
+M,PS_Man,MGT-2024,M MGT-2024 -1,Economic Survival 1: Business Creation / Internship Experience,3.0,B210,Thu3
+M,PS_Man,MGT-2023,M MGT-2023 BF,Financial Statement Analysis,3.0,B411,Wed5
+M,PS_Man,MGT-2024,M MGT-2024 -4,Human Capital Management,3.0,B210,Wed3
+M,PS_Man,MGT-2023,M MGT-2023 IB-1,Macroeconomics,3.0,B104,Tue3
+M,PS_Man,MGT-2024,M MGT-2024 -2,Human Capital Management,3.0,B405,Tue5
+M,PS_Man,MGT-2023,M MGT-2023 DCM-1,Macroeconomics,3.0,B311,Tue1
+M,PS_Man,MGT-2024,M MGT-2024 -5,Human Capital Management,3.0,B201,Tue2
+M,PS_Man,MGT-2024,M MGT-2024 -1,Marketing Management,3.0,B401,Tue5
+M,PS_Man,MGT-2024,M MGT-2024 -2,Business Mathematics,3.0,B401,Wed3
+M,PS_Man,MGT-2024,M MGT-2024 -2,Marketing Management,3.0,B403,Wed5
+M,PS_Man,MGT-2024,M MGT-2024 -3,Marketing Management,3.0,B209,Thu4
+M,PS_Man,MGT-2024,M MGT-2024 -3,Human Capital Management,3.0,B403,Wed4
+M,PS_Man,MGT-2023,M MGT-2023 DCM-2,Consumer Behavior,3.0,B309,Fri5
+M,PS_Man,MGT-2023,M MGT-2023 HCM,Macroeconomics,3.0,A420,Tue4
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Mathematics for the Elementary School 1,3.0,B401,Mon5
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Career in Education,3.0,B105,Thu2
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Child Development,3.0,B208,Fri4
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Science Concept 1,3.0,B307,Fri1
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Inclusive Education,3.0,B309,Mon1
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Teaching Indonesian Language in Elementary School 1,3.0,B201,Mon2
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Teaching English for Young Learners (TEYL),3.0,B202,Tue3
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Psychology of Education,3.0,A420,Tue5
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Survival English,0.0,B304,Thu3
+M,PS_PGSD,PSTE-2022,M PSTE-2022 -1,Academic Writing,3.0,B211,Mon1
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Social Studies 1,3.0,B104,Thu1
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Introduction to English as a Medium of Instruction (EMI),3.0,A421,Thu5
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Child Development,3.0,B305,Tue5
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Economic Survival 1: Business Creation / Internship Experience,3.0,B302,Wed1
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Career in Education,3.0,B102,Mon5
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Psychology of Education,3.0,B102,Tue3
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Introduction to English as a Medium of Instruction (EMI),3.0,B201,Thu4
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Introduction to Education,3.0,B206,Wed5
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -2,Economic Survival 1: Business Creation / Internship Experience,3.0,B401,Thu1
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Introduction to Education,3.0,B203,Wed4
+M,PS_PGSD,PSTE-2024,M PSTE-2024 -1,Survival English,0.0,B311,Mon2
+M,PS_PGSD,PSTE-2023,M PSTE-2023 -1,Academic Writing,0.0,B203,Mon4
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Web Design,3.0,Theater 3 PUCC,Thu1
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Management and Organizational Behavior,3.0,LabA216,Fri1
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Survival English,0.0,LabA209,Mon5
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Survival English,0.0,C202 (PUCC),Fri4
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Introduction to Information System,3.0,LabA209,Wed4
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Introduction to Information System,3.0,LabA215,Thu3
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Programming Concepts,3.0,C202 (PUCC),Mon4
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Discrete Mathematics,3.0,Theater 2 PUCC,Mon3
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Discrete Mathematics,3.0,LabA211,Fri4
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Economic Survival 1: Business Creation / Internship Experience,3.0,Theater 2 PUCC,Thu3
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 4,Economic Survival 1: Business Creation / Internship Experience,3.0,Theater 1 PUCC,Tue4
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Management and Organizational Behavior,3.0,LabA209,Thu3
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Programming Concepts,3.0,LabA209,Wed2
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 5,Web Design,3.0,LabA215,Thu2
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Information System Analysis and Design,3.0,LabA215,Fri2
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Computer Network,3.0,Theater 2 PUCC,Wed2
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Academic Writing,0.0,LabA215,Tue3
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Academic Writing,0.0,Theater 3 PUCC,Tue5
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Academic Writing,0.0,Theater 1 PUCC,Wed1
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 3,Economic Survival 1: Business Creation / Internship Experience,3.0,C202 (PUCC),Tue3
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Computer Network,3.0,LabA209,Mon4
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Supply Chain Management,3.0,Theater 3 PUCC,Mon2
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Academic Writing,0.0,Theater 1 PUCC,Fri1
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Supply Chain Management,3.0,Theater 1 PUCC,Mon4
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Enterprise Resource Planning,3.0,C202 (PUCC),Tue5
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Big Data Technology,3.0,Theater 1 PUCC,Thu2
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Big Data Technology,3.0,Theater 2 PUCC,Wed3
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Data Visualization,3.0,Theater 2 PUCC,Fri1
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Data Visualization,3.0,LabA216,Tue1
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 2,Economic Survival 1: Business Creation / Internship Experience,3.0,C202 (PUCC),Wed3
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Enterprise Resource Planning,3.0,Theater 1 PUCC,Wed5
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 1,Survival English,0.0,Theater 2 PUCC,Mon5
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 1,Economic Survival 1: Business Creation / Internship Experience,3.0,LabA216,Thu5
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 3,Survival English,0.0,LabA211,Thu3
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Information System Analysis and Design,3.0,LabA216,Mon5
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Information System Analysis and Design,3.0,Theater 3 PUCC,Thu5
+M,PS_SI,IS-2024,M IS-2024 IS 2024 CLASS 2,Survival English,0.0,LabA209,Fri2
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Multimedia Application Development,3.0,LabA211,Tue3
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Multimedia Application Development,3.0,LabA211,Tue1
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Multimedia Application Development,3.0,LabA215,Mon2
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Information System Analysis and Design,3.0,LabA211,Mon1
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Mobile Programming,3.0,Theater 3 PUCC,Wed5
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Mobile Programming,3.0,Theater 1 PUCC,Thu3
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 1,Mobile Programming,3.0,LabA215,Wed4
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Mobile Programming,3.0,LabA216,Mon1
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 1,Computer Network,3.0,C202 (PUCC),Wed1
+M,PS_SI,IS-2023,M IS-2023 BUSINESS INTELLIGENCE 2023 CLASS 2,Computer Network,3.0,LabA209,Tue2
+M,PS_SI,IS-2023,M IS-2023 EIS PLANNING & DEVELOPMENT 2023 CLASS 2,Multimedia Application Development,3.0,Theater 2 PUCC,Thu4
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Management and Organizational Behavior,3.0,CR-02 (Pekanbaru),Tue3
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Web Design,3.0,CR-01 (Pekanbaru),Wed4
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,CR-02 (Pekanbaru),Fri1
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Programming Concepts,3.0,CR-01 (Pekanbaru),Mon2
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Discrete Mathematics,3.0,CR-01 (Pekanbaru),Wed3
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Survival English,0.0,CR-02 (Pekanbaru),Mon4
+M,PS_SI_KKP,ISP-2024,M ISP-2024 Class 1,Introduction to Information System,3.0,CR-02 (Pekanbaru),Thu1
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Digital System and Laboratory,3.0,A420,Thu2
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Physics 1: Mechanics,3.0,B103,Tue5
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Calculus 1,3.0,B103,Wed5
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Fundamentals of Electrical Engineering,3.0,B405,Wed3
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Introduction to Programming,3.0,B403,Mon2
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,A420,Mon3
+M,PS_TE,EE-2023,M EE-2023 Control System,Physics 3,3.0,A420,Wed5
+M,PS_TE,EE-2023,M EE-2023 Control System,Engineering Mathematics,3.0,A420,Wed1
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 1,Survival English,0.0,B102,Fri1
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,B310,Tue3
+M,PS_TE,EE-2023,M EE-2023 Control System,Modern Physics,3.0,B205,Wed3
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Survival English,0.0,B306,Mon2
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Digital System and Laboratory,3.0,B102,Fri4
+M,PS_TE,EE-2023,M EE-2023 Control System,Engineering Electromagnetics,3.0,B108,Tue2
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Fundamentals of Electrical Engineering,3.0,A424,Tue4
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Calculus 1,3.0,B209,Wed1
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Introduction to Programming,3.0,B205,Wed1
+M,PS_TE,EE-2023,M EE-2023 Control System,Academic Writing,0.0,B203,Mon5
+M,PS_TE,EE-2023,M EE-2023 Control System,Feedback and Control Systems,3.0,B410,Thu1
+M,PS_TE,EE-2024,M EE-2024 EEN 2024 Class 2,Physics 1: Mechanics,3.0,B311,Wed1
+M,PS_TE,EE-2023,M EE-2023 Control System,Numerical Methods with MATLAB,3.0,B411,Tue4
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Research Methodology,2.0,B301,Fri5
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Operational Research 1,3.0,B408,Wed2
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Integrated System,2.0,B411,Fri4
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Integrated System,2.0,B211,Thu5
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Integrated Practicum,2.0,B209,Thu1
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Integrated Practicum,2.0,A420,Mon2
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Industrial Organization Analysis and Design,3.0,B302,Mon2
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Industrial Organization Analysis and Design,3.0,B103,Fri5
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Information System Analysis and Design,3.0,B205,Mon2
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Information System Analysis and Design,3.0,B108,Tue1
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Product Design and Development,3.0,B309,Mon2
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Engineering Economics and Economics,3.0,B304,Thu1
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Calculus 1,3.0,B409,Wed3
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Statistics 1,2.0,A420,Wed3
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Research Methodology,2.0,B310,Fri2
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Facility Design,3.0,B202,Fri4
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Computer Programming,3.0,B210,Mon2
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Operational Research 1,3.0,B202,Fri1
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,B204,Fri4
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,B306,Fri5
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Physics 1,3.0,B206,Thu1
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Physics 1,3.0,B102,Wed4
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Calculus 1,3.0,A421,Wed2
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Calculus 1,3.0,B207,Wed3
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Engineering Drawing (IE),3.0,B307,Thu4
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Engineering Drawing (IE),3.0,A424,Thu2
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Computer Programming,3.0,B307,Thu2
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Introduction to Industrial Engineering,3.0,B101,Fri4
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Facility Design,3.0,B408,Thu5
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Introduction to Industrial Engineering,3.0,A421,Tue5
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Engineering Economics and Economics,3.0,B105,Wed5
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Engineering Economics and Economics,3.0,B410,Wed3
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Statistics 1,2.0,B102,Wed5
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Indonesian Language,3.0,B210,Tue4
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Indonesian Language,3.0,B403,Wed1
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Manufacturing Process,3.0,B411,Mon4
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Manufacturing Process,3.0,B410,Thu4
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Work System Analysis and Design,3.0,B306,Thu1
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Work System Analysis and Design,3.0,B208,Tue4
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Operational Research 1,3.0,B304,Mon5
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Introduction to Industrial Engineering,3.0,B401,Mon2
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Introduction to Industrial Engineering,3.0,B405,Thu5
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Statistics 1,2.0,B105,Mon4
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Economic Survival 1: Business Creation / Internship Experience,3.0,B410,Mon5
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Calculus 1,3.0,B210,Thu2
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Physics 1,3.0,B404,Mon3
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Economic Survival 1: Business Creation / Internship Experience,3.0,B207,Tue2
+M,PS_TInd,IE-2022,M IE-2022 Class 1,Capstone Design,2.0,A421,Fri5
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Capstone Design,2.0,B102,Mon2
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Linear Algebra,2.0,B409,Thu5
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Linear Algebra,2.0,B404,Fri2
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Work System Analysis and Design,3.0,B305,Thu4
+M,PS_TInd,IE-2024,M IE-2024 Class 1,Survival English,0.0,B203,Thu2
+M,PS_TInd,IE-2022,M IE-2022 Class 2,Product Design and Development,3.0,B207,Thu5
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Manufacturing Process,3.0,B201,Tue1
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Indonesian Language,3.0,B301,Fri1
+M,PS_TInd,IE-2023,M IE-2023 Class 3,Academic Writing,0.0,B307,Thu1
+M,PS_TInd,IE-2023,M IE-2023 Class 2,Academic Writing,0.0,A421,Mon4
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Academic Writing,0.0,B206,Thu4
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Engineering Drawing (IE),3.0,B301,Tue5
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Survival English,0.0,B205,Fri4
+M,PS_TInd,IE-2023,M IE-2023 Class 1,Linear Algebra,2.0,B410,Wed4
+M,PS_TInd,IE-2024,M IE-2024 Class 3,Computer Programming,3.0,B302,Wed3
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Engineering Drawing (IE),3.0,B211,Wed4
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Survival English,0.0,B409,Tue3
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Computer Programming,3.0,B210,Thu5
+M,PS_TInd,IE-2024,M IE-2024 Class 4,Physics 1,3.0,B401,Wed5
+M,PS_TInd,IE-2024,M IE-2024 Class 2,Survival English,0.0,B102,Thu4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Discrete Mathematics,3.0,LabA216,Wed2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Programming Concepts,3.0,Theater 1 PUCC,Tue3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Programming Concepts,3.0,LabA209,Fri5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Programming Concepts,3.0,Theater 2 PUCC,Fri4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Programming Concepts,3.0,LabA211,Fri1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Programming Concepts,3.0,LabA216,Mon3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Programming Concepts,3.0,Theater 2 PUCC,Mon2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Web Programming,3.0,C202 (PUCC),Mon3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Web Programming,3.0,Theater 3 PUCC,Wed1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Web Programming,3.0,Theater 2 PUCC,Thu1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Web Programming,3.0,LabA216,Wed3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Web Programming,3.0,LabA209,Wed5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Web Programming,3.0,LabA211,Fri5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Discrete Mathematics,3.0,Theater 3 PUCC,Mon3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Discrete Mathematics,3.0,LabA216,Fri4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Discrete Mathematics,3.0,LabA211,Thu1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Discrete Mathematics,3.0,LabA215,Wed5
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 3,Software Engineering,3.0,LabA216,Mon4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 4,Software Engineering,3.0,LabA209,Fri4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 5,Software Engineering,3.0,LabA216,Fri5
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 6,Artificial Intelligence,3.0,LabA216,Thu4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 7,Artificial Intelligence,3.0,Theater 1 PUCC,Mon5
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 6,Software Engineering,3.0,C202 (PUCC),Fri1
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 7,Software Engineering,3.0,LabA211,Thu2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Calculus,3.0,C202 (PUCC),Wed5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Computer Organization and Architecture,3.0,LabA209,Wed1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Discrete Mathematics,3.0,Theater 3 PUCC,Mon5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Calculus,3.0,LabA211,Fri2
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 7,Wireless and Mobile Programming,3.0,LabA209,Tue4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Calculus,3.0,Theater 1 PUCC,Tue2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Survival English,0.0,LabA216,Mon2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Survival English,0.0,LabA216,Wed5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Survival English,0.0,Theater 3 PUCC,Fri5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Survival English,0.0,LabA216,Tue2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Survival English,0.0,Theater 2 PUCC,Mon1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Survival English,0.0,C202 (PUCC),Tue2
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 7,Academic Writing,0.0,Theater 1 PUCC,Tue5
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 6,Academic Writing,0.0,LabA215,Wed1
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 5,Academic Writing,0.0,C202 (PUCC),Wed4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 4,Academic Writing,0.0,C202 (PUCC),Thu1
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 3,Academic Writing,0.0,Theater 3 PUCC,Tue4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 2,Academic Writing,0.0,Theater 3 PUCC,Tue2
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 1,Academic Writing,0.0,LabA211,Wed5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Calculus,3.0,Theater 3 PUCC,Wed2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Economic Survival 1: Business Creation / Internship Experience,3.0,Theater 2 PUCC,Tue3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 4,Wireless and Mobile Programming,3.0,Theater 1 PUCC,Wed4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 5,Wireless and Mobile Programming,3.0,Theater 1 PUCC,Mon3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 6,Wireless and Mobile Programming,3.0,Theater 1 PUCC,Wed3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 5,Artificial Intelligence,3.0,LabA215,Wed3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 1,Artificial Intelligence,3.0,Theater 1 PUCC,Thu1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Economic Survival 1: Business Creation / Internship Experience,3.0,LabA215,Fri1
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Economic Survival 1: Business Creation / Internship Experience,3.0,LabA211,Mon4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Economic Survival 1: Business Creation / Internship Experience,3.0,LabA216,Fri2
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 2,Artificial Intelligence,3.0,Theater 3 PUCC,Tue3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 1,Software Engineering,3.0,LabA216,Thu2
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 2,Software Engineering,3.0,LabA216,Tue4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Calculus,3.0,Theater 3 PUCC,Fri2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Calculus,3.0,Theater 1 PUCC,Fri4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 3,Wireless and Mobile Programming,3.0,Theater 2 PUCC,Fri2
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 4,Artificial Intelligence,3.0,LabA209,Mon2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 4,Computer Organization and Architecture,3.0,Theater 3 PUCC,Mon4
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Computer Organization and Architecture,3.0,LabA216,Thu3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 3,Artificial Intelligence,3.0,LabA216,Tue3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,LabA209,Mon3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,Theater 1 PUCC,Mon1
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 2,Data Structure and Algorithm,3.0,Theater 1 PUCC,Thu5
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 1,Data Structure and Algorithm,3.0,Theater 2 PUCC,Wed1
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 6,Data Structure and Algorithm,3.0,C202 (PUCC),Fri5
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 7,Data Structure and Algorithm,3.0,LabA209,Wed3
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 7,Network Security,3.0,Theater 1 PUCC,Thu4
+M,PS_TInf,IT-2023,M IT-2023 IT 2023 Class 6,Network Security,3.0,LabA215,Mon3
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 6,Computer Organization and Architecture,3.0,LabA209,Tue5
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 5,Computer Organization and Architecture,3.0,C202 (PUCC),Fri2
+M,PS_TInf,IT-2024,M IT-2024 IT 2024 Class 3,Computer Organization and Architecture,3.0,LabA211,Mon5
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Survival English,0.0,CR-01 (Pekanbaru),Fri1
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,CR-02 (Pekanbaru),Thu4
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Calculus,3.0,CR-01 (Pekanbaru),Fri5
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Programming Concepts,3.0,CR-01 (Pekanbaru),Wed2
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Web Programming,3.0,CR-01 (Pekanbaru),Tue3
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Computer Organization and Architecture,3.0,CR-02 (Pekanbaru),Wed3
+M,PS_TInf_KKP,ITP-2024,M ITP-2024 Class 1,Discrete Mathematics,3.0,CR-01 (Pekanbaru),Thu3
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Survival English,0.0,B308,Wed5
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Calculus 1,3.0,B209,Thu2
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Physics 1,3.0,B303,Mon4
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,Microbiology,3.0,B409,Tue1
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,Environmental Chemistry,3.0,B404,Wed1
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Ecology 1,3.0,B307,Tue5
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Career and Leadership: Introduction to Environmental Engineering,3.0,B405,Wed1
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Survival English,0.0,B201,Thu3
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,Fluid Mechanics,3.0,B406,Wed5
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Economic Survival 1: Business Creation / Internship Experience,3.0,B302,Fri5
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Chemistry 1,3.0,B108,Thu4
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Career and Leadership: Introduction to Environmental Engineering,3.0,B203,Fri4
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Ecology 1,3.0,B307,Tue1
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Economic Survival 1: Business Creation / Internship Experience,3.0,B204,Wed1
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,"Environmental Health, Safety, and Quality Management",3.0,B101,Thu5
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,Materials Flow Analysis and Life Cycle Assessment,3.0,A420,Fri1
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,Academic Writing,0.0,B211,Fri2
+M,PS_TL,ENV-2023,M ENV-2023 Environmental Management,Unit Operations and Unit Processes,3.0,B302,Thu3
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Chemistry 1,3.0,B210,Mon3
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 1,Physics 1,3.0,B102,Thu5
+M,PS_TL,ENV-2022,M ENV-2022 ENV 2022,Project Management,0.0,A424,Wed4
+M,PS_TL,ENV-2024,M ENV-2024 ENV 2024 Class 2,Calculus 1,3.0,B409,Wed2
+M,PS_TM,ME-2023,M ME-2023 Class 1,Academic Writing,0.0,B104,Mon2
+M,PS_TM,ME-2024,M ME-2024 Class B,Survival English,0.0,B208,Thu4
+M,PS_TM,ME-2024,M ME-2024 Class B,Physical Chemistry,3.0,B407,Thu3
+M,PS_TM,ME-2024,M ME-2024 Class B,Physics 1,3.0,A424,Wed2
+M,PS_TM,ME-2024,M ME-2024 Class B,Calculus 1,3.0,B408,Tue5
+M,PS_TM,ME-2024,M ME-2024 Class B,"Statistics, Problem Solving, and Decision Making",3.0,B210,Wed2
+M,PS_TM,ME-2024,M ME-2024 Class B,Mechanical Drawing and CAD,3.0,B311,Tue3
+M,PS_TM,ME-2024,M ME-2024 Class B,Economic Survival 1: Business Creation / Internship Experience,3.0,B104,Thu3
+M,PS_TM,ME-2024,M ME-2024 Class A,Survival English,0.0,B408,Thu4
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Mechanics of Materials,3.0,B210,Fri1
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,"Health, Safety, and Environment",2.0,B403,Thu2
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Steel Structure 2,3.0,B408,Wed4
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Survival English,0.0,B303,Tue3
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Introduction to Civil Engineering,3.0,B410,Fri5
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Physics 1,3.0,B304,Wed1
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Applied Mathematics 1,3.0,B407,Fri1
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Statistics and Probability,3.0,B207,Mon5
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Economic Survival 1: Business Creation / Internship Experience,3.0,B105,Thu4
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Computer Programming,3.0,B101,Thu3
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Economic Survival 1: Business Creation / Internship Experience,3.0,B309,Tue2
+M,PS_TS,CE-2024,M CE-2024 M CLASS 2,Computer Programming,3.0,A420,Thu4
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Pavement Design,3.0,B105,Wed1
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Engineering Materials and Equipment,3.0,B403,Mon5
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Concrete Structure 2,3.0,B405,Thu2
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Construction Contracts and Legal,2.0,A424,Mon2
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Foundation 2,2.0,B403,Fri1
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Traffic Engineering,3.0,B408,Wed5
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Soil Mechanics 1,3.0,B211,Thu1
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Hydrology and Drainage,3.0,B102,Thu1
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Statistics and Probability,3.0,B201,Wed3
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Applied Mathematics 1,3.0,B206,Tue4
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Physics 1,3.0,B309,Thu3
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Introduction to Civil Engineering,3.0,B409,Mon3
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Engineering Mechanics 2,3.0,B405,Mon3
+M,PS_TS,CE-2024,M CE-2024 M CLASS 1,Survival English,0.0,B105,Fri1
+M,PS_TS,CE-2023,M CE-2023 M CLASS 1,Academic Writing,0.0,B308,Tue1
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Engineering Economics and Construction,3.0,B204,Tue1
+M,PS_TS,CE-2022,M CE-2022 M CLASS 1,Construction Execution and Demolition Methods,2.0,B105,Mon2

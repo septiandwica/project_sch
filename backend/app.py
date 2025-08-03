@@ -10,13 +10,16 @@ from werkzeug.utils import secure_filename
 from flask_cors import CORS
 from datetime import datetime
 import random
+from io import StringIO
+from flask_sqlalchemy import SQLAlchemy
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from werkzeug.security import generate_password_hash, check_password_hash
 from collections import defaultdict
 
 app = Flask(__name__)
 
 # Enable CORS untuk API endpoints
-CORS(app)
-
+CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
 # Konfigurasi upload
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'csv'}
@@ -30,6 +33,105 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+
+
+# PostgreSQL setup (single DB for both services)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://septiandwica:080923@localhost/schedule_db'  # Adjust with the correct credentials
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# JWT configuration
+app.config['JWT_SECRET_KEY'] = '1234567890qwertyuiopasdfghjklzxcvbnm.zxcvbnmasdfghjklqwertyuiop'  # Replace with a more secure secret key
+app.config['JWT_TOKEN_LOCATION'] = ['headers']  # Specifies that the JWT will be in the Authorization header
+
+db = SQLAlchemy(app)
+jwt = JWTManager(app)
+# Model untuk tabel schedule
+class Schedule(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    program_session = db.Column(db.String(100))
+    major = db.Column(db.String(100))
+    curriculum = db.Column(db.String(100))
+    class_name = db.Column(db.String(100))
+    subject = db.Column(db.String(100))
+    credit = db.Column(db.Integer)  # Mengubah 'Cr' menjadi Integer
+    room = db.Column(db.String(100))
+    sched_time = db.Column(db.String(100))
+    lecturer = db.Column(db.String(100))  #
+# Model untuk tabel user (lecturer)
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
+    role = db.Column(db.String(100))
+    major = db.Column(db.String(50))
+
+
+with app.app_context():
+    db.create_all()
+
+
+# Fungsi untuk memasukkan data schedule ke dalam tabel schedule
+def add_schedule(data):
+    schedule = Schedule(
+        program_session=data['Program Session'],
+        major=data['Major'],
+        curriculum=data['Curriculum'],
+        class_name=data['Class'],
+        subject=data['Subject'],
+        credit=int(data['Cr']),  # Mengubah Cr menjadi integer
+        room=data['Room'],
+        sched_time=data['Sched. Time'],
+        lecturer=data['Lecturer']  # Nama lecturer disimpan langsung di schedule
+    )
+    db.session.add(schedule)
+    db.session.commit()
+# Register endpoint
+@app.route('/api/register', methods=['POST'])
+def register():
+    username = request.json.get('username')
+    password = request.json.get('password')
+    role = request.json.get('role')  # admin, lecturer, ketua_major
+    major = request.json.get('major', None)  # Optional for lecturer or ketua_major
+
+    # Check if user already exists
+    if User.query.filter_by(username=username).first():
+        return jsonify({'message': 'User already exists'}), 400
+
+    # Hash password before storing (for security)
+    hashed_password = generate_password_hash(password)
+
+    # Create new user
+    user = User(username=username, password=hashed_password, role=role, major=major)
+    db.session.add(user)
+    db.session.commit()
+
+    return jsonify({'message': 'User registered successfully'}), 201
+
+# Login endpoint
+@app.route('/api/login', methods=['POST'])
+def login():
+    username = request.json.get('username')
+    password = request.json.get('password')
+
+    # Check if user exists
+    user = User.query.filter_by(username=username).first()
+    if not user or not check_password_hash(user.password, password):
+        return jsonify({'message': 'Invalid credentials'}), 401
+
+    # Generate JWT token
+    access_token = create_access_token(identity={'id': user.id, 'username': user.username, 'role': user.role})
+    return jsonify({'access_token': access_token}), 200
+
+
+@app.route('/api/logout', methods=['POST'])
+def logout():
+    # Invalidate the token by instructing the frontend to remove it from localStorage or cookies.
+    # Flask itself does not store the JWT token, so you only need to clear it on the client-side.
+    response = jsonify({'message': 'Successfully logged out'})
+    response.status_code = 200
+    return response
 
 def train_and_predict_room_availability(schedule_df, rooms_df):
     """Fungsi untuk melatih model dan memprediksi ketersediaan ruangan"""
@@ -805,7 +907,8 @@ def assign_lecturers_endpoint():
             'constraints_applied': {
                 'Full-time lecturers': 'Max 5 working days, Max 12 credits per day',
                 'Part-time lecturers': 'Max 2 working days, Max 6 credits per day'
-            }
+            },
+             'csv_path': csv_path
         })
         
     except pd.errors.EmptyDataError:
@@ -814,6 +917,91 @@ def assign_lecturers_endpoint():
         return jsonify({'error': f'Error parsing CSV file: {str(e)}'}), 400
     except Exception as e:
         return jsonify({'error': f'Processing error: {str(e)}'}), 500
+    
+    
+@app.route('/api/schedule/save', methods=['POST'])
+def upload_csv():
+    if 'file' not in request.files:
+        return jsonify({'message': 'No file part'}), 400
+
+    file = request.files['file']
+    
+    if file.filename == '':
+        return jsonify({'message': 'No selected file'}), 400
+
+    if file and file.filename.endswith('.csv'):
+        filename = secure_filename(file.filename)
+        csv_data = file.read().decode('utf-8')
+        df = pd.read_csv(StringIO(csv_data))  # Membaca CSV ke DataFrame
+
+        # Loop untuk memproses data CSV dan memasukkannya ke tabel schedule
+        for _, row in df.iterrows():
+            add_schedule(row)  # Menambah schedule ke tabel schedule
+
+        return jsonify({'message': 'CSV data has been successfully uploaded and added to the database'}), 200
+
+    return jsonify({'message': 'Invalid file type, only CSV allowed'}), 400
+
+time_mapping = {
+    # Monday to Thursday
+    "Mon1": "07:30-09:45",
+    "Mon2": "10:00-12:15",
+    "Mon3": "12:30-14:45",
+    "Mon4": "15:00-17:15",
+    "Mon5": "17:30-19:30",
+    
+    "Tue1": "07:30-09:45",
+    "Tue2": "10:00-12:15",
+    "Tue3": "12:30-14:45",
+    "Tue4": "15:00-17:15",
+    "Tue5": "17:30-19:30",
+
+    "Wed1": "07:30-09:45",
+    "Wed2": "10:00-12:15",
+    "Wed3": "12:30-14:45",
+    "Wed4": "15:00-17:15",
+    "Wed5": "17:30-19:30",
+
+    "Thu1": "07:30-09:45",
+    "Thu2": "10:00-12:15",
+    "Thu3": "12:30-14:45",
+    "Thu4": "15:00-17:15",
+    "Thu5": "17:30-19:30",
+
+    # Friday
+    "Fri1": "07:00-09:15",
+    "Fri2": "09:30-11:45",
+    "Fri4": "13:40-15:55",
+    "Fri5": "16:10-18:25"
+}
+
+@app.route('/api/schedule/calendar', methods=['GET'])
+def get_schedule_calendar():
+    # Mengambil semua data schedule dari database
+    schedules = Schedule.query.all()
+
+    # Menyiapkan data untuk dikirim ke frontend dalam format kalender
+    schedule_data = []
+    for schedule in schedules:
+        # Dapatkan waktu sesuai dengan session
+        session_time = time_mapping.get(schedule.sched_time, "Unknown Time")
+        
+        if session_time == "Unknown Time":
+            continue  # Skip schedule yang tidak diketahui waktunya
+
+        start_time, end_time = session_time.split('-')
+        
+        schedule_data.append({
+            "id": schedule.id,
+            "major": schedule.major,
+            "title": schedule.subject,
+            "start": f"{schedule.sched_time.split()[0]}T{start_time}:00",  # Format waktu untuk FullCalendar
+            "end": f"{schedule.sched_time.split()[0]}T{end_time}:00",  # Format waktu untuk FullCalendar
+            "room": schedule.room,
+            "lecturer": schedule.lecturer
+        })
+
+    return jsonify(schedule_data)
 @app.route('/api/download/<filename>')
 def download_file(filename):
     """Original endpoint untuk download file"""
@@ -843,5 +1031,8 @@ def health_check():
         }
     })
 
+
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()  # Ini memastikan tabel dibuat saat aplikasi dijalankan
     app.run(debug=True, port=8787)
